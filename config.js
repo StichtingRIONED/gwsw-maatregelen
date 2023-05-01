@@ -4,7 +4,7 @@ var respecConfig =
   specStatus: "design",
   //specType: "HR",             // Handreiking
   //format: "markdown",         // Altijd "markdown"     
-  shortName: "gwsw-hyd", 	      // Wordt gebruikt in de document URL
+  shortName: "gwsw-maatregelen", 	      // Wordt gebruikt in de document URL
   license: "cc0",
    
   editors: [{
