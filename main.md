@@ -6,7 +6,7 @@
 </style>
 
 Stichting RIONED is eigenaar van dit GitHub-project, Eric Oosterom is de verantwoordelijk projectmanager. 
-Vragen over deze website en het GWSW kunt u stellen via <a href="mailto:gwsw@rioned.org" target="_blank">gwsw@rioned.org</a>. 
+Vragen over deze website en het GWSW kunt u stellen via gwsw@rioned.org. 
 
 # Inleiding
 
