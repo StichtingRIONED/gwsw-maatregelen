@@ -1,2 +1,2 @@
-# gwsw-geo
-Geo-toepassingen van het GWSW
+# gwsw-maatregelen
+GWSW Maatregelen - Deelmodel en toepassingen
