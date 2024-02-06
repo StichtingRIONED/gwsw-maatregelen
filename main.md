@@ -11,12 +11,6 @@ Vragen over deze website en het GWSW kunt u stellen via gwsw@rioned.org.
 
 # Inleiding
 
-<img src="media/image1.png" style="width:1.5748in;height:1.5748in" />
-
-<img src="media/image2.jpeg" style="width:8.26772in;height:3.81102in" />
-
-<img src="media/image3.jpeg" style="width:1.77165in;height:0.91732in" />
-
 <table>
 <caption>tabVoorblad</caption>
 <thead>
