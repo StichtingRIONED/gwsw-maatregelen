@@ -1627,3 +1627,14 @@ Tabel : Informatie-uitwisseling stap 7
 </tr>
 </tbody>
 </table>
+
+## UML schema's tbv modellering
+
+### Maatregelenproces
+![maatregelenproces](media/GWSW%20maatregelen%20-%20Maatregelenproces.png)
+
+### Initieren reinigen en inspectie
+![reinigen_inspectie](media/GWSW%20maatregelen%20-%20InitierenReinigingInspectie.png)
+
+### Beoordelen en opstellen maatregelen
+![reinigen_inspectie](media/GWSW%20maatregelen%20-%20Beoordelen%20en%20opstellen%20maatregelen.png)
