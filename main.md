@@ -1,296 +1,28 @@
 # GWSW Maatregelen
 
+<!-- gebruik voor lokaal editen -->
+<script src="./builds/respec-rioned.js"></script>
+
 <style>
   .symbolSmall{width:20px;height:20px;margin-right:1em;vertical-align:middle}
   .symbol{width:30px;height:30px;margin-right:1em;vertical-align:middle}
 </style>
 
-Stichting RIONED is initiatiefnemer en eigenaar van dit GitHub-project, Eric Oosterom is de verantwoordelijk projectmanager. 
-
-Vragen over deze website en het GWSW kunt u stellen via gwsw@rioned.org. 
-
-<table>
-<caption>tabVoorblad</caption>
-<thead>
-<tr class="header">
-<th>gwsw-maatregelen</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Beschrijvend document versie 1.5.3</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Opdrachtgever:</td>
-<td>Stichting RIONED</td>
-</tr>
-<tr class="even">
-<td>Projectnr:</td>
-<td>RIO006</td>
-</tr>
-<tr class="odd">
-<td>Datum:</td>
-<td>15 november 2023</td>
-</tr>
-</tbody>
-</table>
-
-tabVoorblad
-
-<table>
-<caption>tabSchutblad01</caption>
-<thead>
-<tr class="header">
-<th></th>
-<th>gwsw-maatregelen</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td>Beschrijvend document versie 1.5.3</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Opdrachtgever:</td>
-<td>Stichting RIONED</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Projectnr:</td>
-<td>RIO006</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Rapportnr:</td>
-<td>20231115</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Status:</td>
-<td>Concept</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Datum:</td>
-<td>15 november 2023</td>
-</tr>
-</tbody>
-</table>
-
-tabSchutblad01
-
-<table>
-<caption>tabSchutblad02</caption>
-<thead>
-<tr class="header">
-<th><p>T 088 - 33 66 333</p>
-<p>F 088 - 33 66 099</p>
-<p>E info@kragten.nl</p>
-<p><img src="media/image4.png" style="width:1.20173in;height:0.55625in" /></p>
-<p>© 2023 Kragten</p>
-<p>Niets uit dit rapport mag worden verveelvoudigd en/of openbaar gemaakt door middel van druk, fotokopie, microfilm of op welke andere wijze dan ook zonder voorafgaande toestemming van Kragten. Het is tevens verboden informatie en kennis verwerkt in dit rapport ter beschikking te stellen aan derden of op andere wijze</p>
-<p>toe te passen dan waaraan in de overeenkomst toestemming</p>
-<p>wordt verleend.</p></th>
-<th></th>
-<th>Opsteller:</th>
-<th>-+C0H.v.Keeken+-</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>H.v.Keeken</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>Verificatie:</td>
-<td>-+R0R.Golsteijn+-</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>R.Golsteijn</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>Validatie:</td>
-<td>-+V0E.Oosterom+-</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>E.Oosterom</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><img src="media/image5.jpeg" style="width:1.69291in;height:0.87795in" /></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-tabSchutblad02
-
-Voorwoord
+Vanuit Stichting RIONED is Eric Oosterom de verantwoordelijk projectmanager. Vragen over de module en de totstandkoming en vaststelling ervan kunt u stellen via gwsw@rioned.org. 
 
 De module GWSW-Maatregelen is in opdracht van Stichting RIONED ontwikkeld door Hans van Keeken en Roel Golsteijn (beiden Kragten), in samenwerking met de werkgroep GWSW-Maatregelen (hierna te noemen “werkgroep”), bestaande uit:
+- Walter Kuhn, gemeente Almere
+- Leo Bloedjes, gemeente Almere
+- Alex Buijs, gemeente Breda
+- Eric van Gorkom, I-sago en gemeente Roosendaal
+- Wouter van Riel, Infralytics en GWSW-modelleerteam namens Stichting RIONED
+- Erwin Schreve, namens gemeente Leiden
+- John Wouters, gemeente Rotterdam
+- Steven Oterdoom, gemeente Zaandam
 
--   Walter Kuhn, gemeente Almere
+# Inleiding
 
--   Leo Bloedjes, gemeente Almere
-
--   Alex Buijs, gemeente Breda
-
--   Eric van Gorkom, I-sago en gemeente Roosendaal
-
--   Wouter van Riel, Infralytics en GWSW-modelleerteam namens Stichting RIONED
-
--   Erwin Schreve, namens gemeente Leiden
-
--   John Wouters, gemeente Rotterdam
-
--   Steven Oterdoom, gemeente Zaandam
-
-Vanuit Stichting RIONED is Eric Oosterom de verantwoordelijk projectmanager. Vragen over de module en de totstandkoming en vaststelling ervan kunt u stellen via <gwsw@rioned.org>.
-
-Colofon
-
-**Over Stichting RIONED**
-
-Stichting RIONED is de koepelorganisatie voor stedelijk waterbeheer in Nederland. Wij zijn er voor en door alle relevante overheden en bedrijven. Inspelend op nieuwe opgaven en mogelijkheden komen wij op voor het belang van stedelijk waterbeheer: goed zorgen voor afval-, hemel- en grondwater in de steden en dorpen. Stichting RIONED bevordert innovatie, nieuwe kennis en verspreiding van kennis. Wij begrijpen en ondersteunen de vakwereld.
-
-© 2023 Stichting RIONED
-
-<info@rioned.org>
-
-[www.riool.net](http://www.riool.net)
-
-Toelichtende tekst en figuren uit dit rapport mogen alleen worden overgenomen met bronvermelding. Het doel van deze publicatie is dat de tekst van het model zelf - al dan niet in aangepaste vorm - overgenomen en gebruikt wordt bij contractvorming.
-
-Disclaimer
-
-Deze uitgave is met de grootst mogelijke zorg samengesteld. Niettemin aanvaarden de auteurs en de uitgever geen enkele aansprakelijkheid voor mogelijke onjuistheden of eventuele gevolgen door toepassing van de inhoud van deze publicatie.
-
-Auteur
-
-Hans van Keeken (Kragten)
-
-Omslagfoto
-
-……..
-
-Vormgeving
-
-…….
-
-Rapportnummer
-
-……..
-
-ISBN
-
-…….
-
-Inhoudsopgave
-
-1 Inleiding 11
-
-1.1 Achtergrond en inleiding 11
-
-1.2 Scope 12
-
-1.3 Leeswijzer 12
-
-1.4 Uitwisselformaat 12
-
-2 Omschrijving maatregelen 13
-
-3 processtappen 15
-
-3.1 Te onderscheiden processtappen 15
-
-3.2 Processchema 15
-
-4 processtappen en informatieoverdracht 19
-
-4.1 Stap 1: Initiëren reiniging en inspectie. 19
-
-4.2 Stap 2: Uitvoeren reiniging en inspecties en aanlevering waarnemingen. 20
-
-4.3 Stap 3: Uitvoeren beoordeling en opstellen maatregeladvies 20
-
-4.4 Stap 4: Vaststellen maatregelplan 21
-
-4.5 Stap 5: Opstellen contract ten behoeve van uitvoering 22
-
-4.6 Stap 6: Uitvoering maatregelen 23
-
-4.7 Stap 7: Verwerken oplevering uitgevoerde maatregelen in beheerpakket. 25
-
-Tabellen
-
-Tabel 1: Codering voor de vullingsvoorschriften 19
-
-Tabel 2: Informatie-uitwisseling stap 3 20
-
-Tabel 3: Informatie-uitwisseling stap 4 21
-
-Tabel 4: Informatie-uitwisseling stap 5 23
-
-Tabel 5: Informatie-uitwisseling stap 6 24
-
-Tabel 6: Informatie-uitwisseling stap 7 25
-
-afbeeldingen
-
-Afbeelding 1: Voorbeeld acties aan kolkaansluitleiding (Afbeelding afkomstig van Wouter van Riel.) 15
-
-Afbeelding 2: Processtappen en data-uitwisseling 16
-
-Inleiding
-=========
-
-Achtergrond en inleiding
-------------------------
+## Achtergrond en inleiding
 
 De afgelopen jaren heeft er een flinke inhaalslag plaatsgevonden in standaardisatie van beheer en onderhoud van de riolering. Er zijn andere normen van toepassing verklaard, er zijn nieuwe normen opgesteld, binnen het CROW heeft een actualisatie van de hoofdstukken voor rioolrenovatie, reiniging en inspectie plaatsgevonden en Stichting RIONED heeft de “Leidraad voor het visueel inspecteren van de buitenriolering volgens NEN-EN 13508-2” (document 2023-01), het rapport “Classificeren van toestandsaspecten van rioolleidingen en -putten vastgelegd volgens NEN-EN 13508-2” (document 2019-02) met de bijbehorende classificatiemethodiek en het “Model Programma van Eisen visuele inspectie” (document 2019-03) opgesteld.
 
@@ -304,27 +36,24 @@ De riolering en een deel van de afvalwaterketen kan al worden beschreven met het
 
 Vanuit gebruikers is aan Stichting RIONED gevraagd om het GWSW geschikt te maken om als bron te dienen voor de uitwisseling op het gebied van maatregelen. Dit wordt beschreven in GWSW-Maatregelen, waarvan dit document de specificatie is. GWSW-Maatregelen is opgebouwd uit meerdere onderdelen:
 
-1.  Semantiek (uniforme termen en definities, woordenboek, de taal van mensen gestructureerd zodat applicaties/machines het ook kunnen gebruiken) en ordening in een soortenboom;
+1. Semantiek (uniforme termen en definities, woordenboek, de taal van mensen gestructureerd zodat applicaties/machines het ook kunnen gebruiken) en ordening in een soortenboom;
 
-2.  Registratie van objecten/projecten/maatregelen (= minimale datasets en optionele velden), bedoeld voor uitwisselen en delen;
+2. Registratie van objecten/projecten/maatregelen (= minimale datasets en optionele velden), bedoeld voor uitwisselen en delen;
 
-3.  Validatie van (project)datasets (=kwaliteitseisen, conformiteitsklassen).
+3. Validatie van (project)datasets (=kwaliteitseisen, conformiteitsklassen).
 
 Onderdelen 1 en 2 zijn uitgewerkt in hoofdstukken 2 en 3/4, onderdeel 3 is nog niet uitgewerkt in dit document. Dat volgt na vaststelling van onderdeel 2.
 
-Dit beschrijvende document is begin 2023 opgeleverd door de werkgroep voor toetsing door een grotere groep rioleringsbeheerders, adviseurs en aannemers in het voorjaar van 2023. Vervolgens zal in een aantal proefprojecten bij enkele gemeenten in samenwerking met de daar werkzame marktpartijen de specificatie van GWSW-Maatregelen getoetst worden op werkbaarheid en volledigheid. Ook zal getoetst worden welke potentiële knelpunten in beheer- en andere software zou kunnen optreden. Belangstellenden om ook in hun situatie een proefneming te doen, kunnen zich melden via <gwsw@rioned.org>.
+Dit beschrijvende document is begin 2023 opgeleverd door de werkgroep voor toetsing door een grotere groep rioleringsbeheerders, adviseurs en aannemers in het voorjaar van 2023. Vervolgens zal in een aantal proefprojecten bij enkele gemeenten in samenwerking met de daar werkzame marktpartijen de specificatie van GWSW-Maatregelen getoetst worden op werkbaarheid en volledigheid. Ook zal getoetst worden welke potentiële knelpunten in beheer- en andere software zou kunnen optreden. Belangstellenden om ook in hun situatie een proefneming te doen, kunnen zich melden via gwsw@rioned.org.
 
 Beoogd is eind 2023 een verbeterde versie van deze specificatie van GWSW-Maatregelen op te leveren voor consultatie en uiteindelijk vaststelling in een volgende versie van het Gegevenswoordenboek Stedelijk Water.
 
 De algemene beschrijving van het GWSW model vindt u op [data.gwsw.nl](https://data.gwsw.nl/). De datamodellen GWSW-Basis en Minimale Dataset (operationeel beheer), GWSW-Rib en RibX (inspectie en reiniging van leidingen, putten en kolken), GWSW-Hyd (hydraulische modellering), GWSW-Kengetallen (afvalwaterprognoses) en GWSW-Geo (GIS-toepassingen) zijn al eerder vastgestelde onderdelen van het GWSW. Een set van basistools rondom GWSW vindt u op [apps.gwsw.nl](http://apps.gwsw.nl/). Voor de details van het datamodel zie [data.gwsw.nl/maatregelen](https://data.gwsw.nl/maatregelen).
 
-Scope
------
-
+## Scope
 De scope van GWSW-maatregelen is beperkt tot activiteiten aan bestaande objecten. Het aanleggen van objecten valt vooralsnog buiten de scope van GWSW-Maatregelen en kan in een later stadium als uitbreiding worden meegenomen.
 
-Leeswijzer
-----------
+## Leeswijzer
 
 In hoofdstuk 2 zijn de maatregeltypen beschreven. De conclusie uit de werkgroep overleggen is dat de omschrijving van de maatregelen zo vereenvoudigd als mogelijk plaats dient te vinden, doch gebruik te maken van een nadere uitsplitsing van maatregelen indien daar behoefte aan is.
 
@@ -332,96 +61,72 @@ In hoofdstuk 3 zijn de verschillende processtappen beschreven in het beheer, ond
 
 In hoofdstuk 4 zijn de processtappen nader beschreven en is per processtap aangegeven welke informatie er heen en terug gestuurd dient te worden om deze processen in goede banen te leiden. De informatie behoefte is in tabelvorm uitgewerkt.
 
-Uitwisselformaat
-----------------
+## Uitwisselformaat
 
 Dit document bevat een specificatie van de <u>inhoudelijke</u> gegevensbehoefte en gegevensuitwisseling bij de verschillende processtappen rondom het kiezen en uitvoeren van maatregelen in en aan de openbare riolering. Het beschrijft het ‘wat’. Oftewel welke informatie en data de beheerders en marktpartijen minimaal nodig hebben om hun werk goed te kunnen doen. Deze gegevensbehoefte zal worden gemodelleerd in het Gegevenswoordenboek Stedelijk Water. Vervolgens zal gespecificeerd worden hoe uitwisseling van deze data binnen de werkprocessen (processtappen) van beheerders en marktpartijen zal plaatsvinden. Daarbij zal verkend worden of naast het standaard RDF formaat (OroX) voor alle GWSW gerelateerde informatie, ook een ander formaat zoals XML (RibX) noodzakelijk is om in uitwisselingsbehoefte te voorzien.
 
-Omschrijving maatregelen
-========================
+# Omschrijving maatregelen
 
 In de eerste (concept-)versie van GWSW-maatregelen voor vrijverval rioolleidingen van een aantal jaren geleden zijn onder de activiteit Maatregel onderstaande maatregeltypen c.q. activiteiten gegroepeerd.
 
 **Maatregeltypen/activiteiten:**
 
--   Aanleggen
-
--   Buiten gebruik stellen
-
--   Conserveren
-
--   Onderhouden
-
--   Onderzoeken
-
--   Renoveren
-
--   Repareren
-
--   Vervangen
-
--   Verwijderen
+- Aanleggen
+- Buiten gebruik stellen
+- Conserveren
+- Onderhouden
+- Onderzoeken
+- Renoveren
+- Repareren
+- Vervangen
+- Verwijderen
 
 Binnen elk maatregeltype is een verdere uitsplitsing gemaakt naar de beschrijvende maatregel. De beschrijving van deze maatregelen is opgebouwd uit de samenvoeging van de maatregel met het object of met het toestandsaspect.
 
-Zo is bijvoorbeeld bij de maatregeltype vervangen onderscheid gemaakt in de subtypes:
+Zo is bijvoorbeeld bij het maatregeltype vervangen onderscheid gemaakt in de subtypes:
 
 -   Rioolput vergroten
-
 -   Rioolput vervangen
-
 -   Vrijverval rioolleiding vervangen
-
     -   Sleufloos vervangen
-
         -   Pipe bursting
-
         -   Pipe eating
 
 In de aanloop naar de actualisatie van GWSW-Maatregelen is binnen de werkgroep nagedacht in hoeverre deze concept opzet bruikbaar is. Door het maatregeltype “vervangen” te koppelen aan een object conform de decompositie van GWSW‑basis, én gebruik te maken van de headergegevens uit het GWSW-RibX, ligt de maatregel automatisch vast. Ditzelfde geldt voor maatregeltypen aan toestandsaspecten. Door het subtype “vrijmaken leidingprofiel” van het maatregeltype “Onderhouden” te koppelen aan een toestandsaspect, ligt ook hiermee automatisch vast dat het gaat om het verwijderen van een doorgestoken inlaat, wortels, afzetting of dergelijke.
 
 De conclusie uit de werkgroep is dat door de maatregel op een zo hoog mogelijk niveau in de soortenboom te beschrijven en deze te koppelen aan een object of aan een toestandsaspect, er een flinke vereenvoudiging kan plaatsvinden. Dit komt de leesbaarheid ten goede en GWSW-Maatregelen is hierdoor toekomstbestendiger omdat niet bij elke wijziging in objecttypen ook meteen de mogelijkheden binnen GWSW-Maatregelen hoeven te worden aangepast.
 
-processtappen
-=============
+# Processtappen
 
-Te onderscheiden processtappen
-------------------------------
+## Te onderscheiden processtappen
 
 Binnen het proces van beheer, onderhoud, renovatie en vervangen van de riolering zijn een aantal generieke processtappen te onderscheiden. Als voorbeeld zijn in onderstaande afbeelding acties aan een kolkaansluitleiding opgenomen.
 
 <img src="media/image7.png" style="width:5.90486in;height:2.31667in" />
 
-Afbeelding : Voorbeeld acties aan kolkaansluitleiding (Afbeelding afkomstig van Wouter van Riel.)
+Afbeelding: Voorbeeld acties aan kolkaansluitleiding (Afbeelding afkomstig van Wouter van Riel.)
 
 Vanuit bovenstaande afbeelding kunnen generieke processtappen 1 t/m 7 worden samengevat die gelden voor zowel rioolleidingen als rioolputten:
 
 1.  Initiëren reiniging en inspectie
-
 2.  Uitvoeren reiniging en inspectie en aanleveren waarnemingen
-
 3.  Beoordelen inspecties en opstellen maatregeladvies
-
 4.  Vaststellen definitieve maatregel
-
 5.  Opstellen contract
-
 6.  Uitvoeren maatregelen
-
 7.  Verwerken in beheerdata
 
 Tijdens het uitvoeren van deze processtappen dient er informatie via een uitwisselbestand heen en terug te worden uitgewisseld. De stappen zijn in de navolgende paragraaf tekstueel uitgewerkt. Stappen 1 en 2 zijn uitvoerig in het GWSW-RibX beschreven en worden hier niet herhaald. Voor deze stappen wordt verwezen naar het huidige GWSW-RibX.
 
 Stap 7, het verwerken van de gegevens in de beheerdata, staat in deze opsomming als laatste stap aangegeven nadat de benodigde maatregelen zijn uitgevoerd. In de praktijk zal bij elke stap telkens ook (een deel van) de beheerdata worden geactualiseerd.
 
-Processchema
-------------
+## Processchema
 
 Een voorbeeld van een processchema met de stappen 1 t/m 7 met de daarbij horende data-uitwisseling is in afbeelding 2 weergegeven. In dit schema is geen directe link tussen de verschillende processtappen opgenomen. Uitwisseling geschiedt via de data-uitwisseling plaats met een “Heen” en “Terug” bestand per processtap. Er is bewust voor gekozen om een processtap niet volledig als een stroomschema uit te werken. Processen kunnen per opdrachtgever verschillen en het uitwerken ervan behoort niet tot de scope van GWSW-Maatregelen.
 
 <img src="media/image8.png" style="width:5.728in;height:9.16763in" />
 
-Afbeelding : Processtappen en data-uitwisseling
+Afbeelding: Processtappen en data-uitwisseling
 
 Het uitgangspunt dat bij afbeelding 2 is gehanteerd, is dat de benodigde controles en hoe om te gaan met verbeteringen, binnen deze processtappen zelf plaats vindt.
 
@@ -429,57 +134,36 @@ Het resultaat van een voorgaande processtap wordt gebruikt als input voor een op
 
 Tevens geldt dat aan het initiëren van een reiniging en inspectie (stap 1) ook een contract ten grondslag kan liggen. In dat geval is eerst sprake van het opstellen van een contract (stap 5) voordat een programma reiniging en inspectie wordt geïnitieerd (stap 1). Dit geldt ook bij raamovereenkomsten met zowel reinigen en inspecteren van de riolering als onderhoud/renovatie.
 
-processtappen en informatieoverdracht
-=====================================
+## Processtappen en informatieoverdracht
 
 De processtappen uit hoofdstuk 3 zijn in hoofdstuk 4 nader uitgewerkt. Per processtap is ook aangegeven welke benodigde informatie er uitgewisseld dient te worden.
 
 Bij de uit te wisselen informatie in de navolgende paragrafen is telkens in de laatste kolom onder “betreft” aangegeven om welk soort informatie het gaat:
 
-H = Headerinformatie van het object
+- H = Headerinformatie van het object
+- T = Informatie van het toestandsaspect
+- P = Projectinformatie
 
-T = Informatie van het toestandsaspect
-
-P = Projectinformatie
-
-***TOELICHTING:** Kolom “veld” in tabellen 2 t/m 6 is tijdelijk en bevat informatie voor de modelleurs. Dit is informatie welke straks in het definitieve beschrijvend document niet meer terug komt.*
+> **TOELICHTING:** Kolom “veld” in tabellen 2 t/m 6 is tijdelijk en bevat informatie voor de modelleurs. Dit is informatie welke straks in het definitieve beschrijvend document niet meer terug komt.
 
 In de tabellen met informatie-uitwisseling staan de vullingsvoorschriften in twee kolommen:
 
-• “Heen”: de veldvulling in een vooraf aangeleverd bestand.
-
-• “Terug”: de veldvulling in een terug te ontvangen bestand (resultaten van het proces).
+- “Heen”: de veldvulling in een vooraf aangeleverd bestand.
+- “Terug”: de veldvulling in een terug te ontvangen bestand (resultaten van het proces).
 
 De kolommen “Heen” en “Terug” gebruiken de volgende codes:
 
-Tabel : Codering voor de vullingsvoorschriften
-
 <table>
-<thead>
-<tr class="header">
-<th>Code</th>
-<th>Voorschrift veldvulling in bestand</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td>Geen code in kolom “Heen”: Niet vooraf invullen</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Geen code in kolom “Terug”: Niet achteraf invullen (terug zonder wijziging)</td>
-</tr>
-<tr class="odd">
-<td>O</td>
-<td>Optioneel</td>
-</tr>
-<tr class="even">
-<td>A</td>
-<td>Altijd</td>
-</tr>
-</tbody>
+<caption>Codering voor de vullingsvoorschriften</caption>
 </table>
+
+| Code | Voorschrift veldvulling in bestand                                          |
+|:-----|:----------------------------------------------------------------------------|
+|      | Geen code in kolom “Heen”: Niet vooraf invullen                             |
+|      | Geen code in kolom “Terug”: Niet achteraf invullen (terug zonder wijziging) |
+| O    | Optioneel                                                                   |
+| A    | Altijd                                                                      |
+
 
 Als voor de kolom “Heen” geldt dat het gegeven verplicht is (A) en het gegeven ontbreekt in het terug te ontvangen bestand, dan moet de opdrachtgever met de opdrachtnemer afspraken maken over de levering. Wanneer het gegeven voor zowel “Heen” als “Terug” verplicht is (A) en het “Heen”-gegeven is fout of ontbreekt (nieuw object, niet vooraf ingevuld), dan moet de opdrachtnemer dit gegeven – als het bekend is – altijd bij de uitvoering van het proces corrigeren of aanvullen.
 
@@ -515,6 +199,7 @@ De opdrachtnemer ontvangt van de opdrachtgever het gevuld GWSW-RibX bestand met 
 Tabel : Informatie-uitwisseling stap 3
 
 <table>
+<caption>sdf</caption>
 <thead>
 <tr class="header">
 <th><strong>Stap 3: beoordelen inspectie / opstellen maatregeladvies</strong></th>
