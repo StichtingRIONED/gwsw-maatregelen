@@ -75,16 +75,17 @@
 		counter-reset: example figure issue;
 
 		/* Layout */
-		max-width: 60em;               /* mv: was 50em - limit line length to 50em for readability */
+		/* max-width: 60em;               mv: was 50em - limit line length to 50em for readability */
+																	 /* schakel deze helemaal uit voor preview inclusief css (20230523) */
 		margin: 0 auto;                /* center text within page                     */
 		padding: 1.6em 1.5em 2em 50px; /* assume 16px font size for downlevel clients */
 		padding: 1.6em 1.5em 2em calc(26px + 1.5em); /* leave space for status flag     */
 
 		/* Typography */
-		line-height: 1.2; /* mv: was 1.2 */
-		font-family: sans-serif;
+		line-height: 1.2; /*mv: was 1.2*/
 		widows: 2;
 		orphans: 2;
+		font-family: sans-serif;
 		word-wrap: break-word;
 		overflow-wrap: break-word;
 
@@ -334,7 +335,7 @@
 		hyphens: manual;         /* Hyphenated headings look weird */
 	}
 
-  /* mv: 	
+  /* mv:
   h2, h3, h4, h5, h6 {
 		margin-top: 3rem;
 	}
@@ -513,7 +514,7 @@
     font-weight: bold;
   }
   div.box{ /* 20210322 */
-    background: lightyellow; 
+    background: lightyellow;
     border: none;
     box-shadow: 3px 3px rgba(75%, 75%, 75%, .25);
     padding: 1em;
@@ -634,6 +635,9 @@
 	.caption, figcaption, caption {
 		font-style: italic;
 		font-size: 90%;
+		text-align: left;
+		white-space: nowrap;
+		overflow: hidden;
 	}
 	.caption::before, figcaption::before, figcaption > .marker {
 		font-weight: bold;
@@ -714,14 +718,14 @@
   .example {
 		border-color: #8CCBF2;
     background:	#DEF;
-  }  
+  }
   .example-dataset {
 		border-color: #E0CB52;
 		background: #fcfaee;;
-  }  
+  }
   .example-shapes {
 		border-color:  #52e052;
-    background: rgba(158, 253, 5, 0.274);  
+    background: rgba(158, 253, 5, 0.274);
   }
 	.example::before, .example > .marker, .example-shapes::before, .example-shapes > .marker, .example-dataset::before, .example-dataset > .marker {
 		text-transform: uppercase;
@@ -755,9 +759,24 @@ table.simp {
 }
 table.simp th, table.simp td  { /** mv: eenvoudige basistabel */
   padding: 0.3em 0 0.3em 0.5em;
+	border: 1px solid lightgray;
 }
-/* mv: preformatted text (20200927) */
+/* mv: markdown - vertaling naar html-tabel (20230516) */
+table {
+	border-collapse: collapse; /* enkele border-line tussen de cellen */
+}
+table thead {
+	background:	#DEF; /* lichtblauw - zie example */
+}
+table th, table td  {
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  border: 1px solid lightgray;
+}
+tr:nth-child(even) { /* kleur elke "even" rij */
+	background: rgb(245, 247, 255);
+}
 
+/* mv: preformatted text (20200927) */
 pre.simp {
   color: black;
   background-color:  rgb(245, 247, 255);
@@ -945,7 +964,7 @@ img.logo {
 	}
 	table.data caption,
 	table.index caption {
-		max-width: 50em;
+		max-width: 250em;
 		margin: 0 auto 1em;
 	}
 
@@ -1283,7 +1302,7 @@ a#outdated-note:hover {
 
 	.figure .caption, .sidefigure .caption, figcaption {
 		/* in case figure is overlarge, limit caption to 50em */
-		max-width: 50rem;
+		max-width: 250rem;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -1295,7 +1314,7 @@ a#outdated-note:hover {
 		   1. When item < content column, centers item in column.
 		   2. When content < item < available, left-aligns.
 		   3. When item > available, fills available and is scrollable.
-		*/ 
+		*/
 		display: grid;
 		grid-template-columns: minmax(0, 50em);
 	}
