@@ -3,7 +3,7 @@ const http = require("http");
 const fs = require("fs");
 
 const indexFile = __dirname + "/index.html";
-const mdFile = __dirname + "/gwsw ontologie 2.0.md";
+const mdFile = __dirname + "/main.md";
 
 let date = Date.now();
 const srv = express();

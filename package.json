@@ -1,7 +1,7 @@
 {
-  "name": "gwsw_2.0",
+  "name": "gwsw_maatregelen",
   "version": "1.0.0",
-  "description": "Respec for GWSW 2.0",
+  "description": "Respec for GWSW Maatregelen",
   "main": "server.js",
   "scripts": {
     "start": "node ./server.js"
