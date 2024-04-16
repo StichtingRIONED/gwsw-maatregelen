@@ -44,12 +44,29 @@ Onderdelen 1 en 2 zijn uitgewerkt in hoofdstukken 2, 3 en 4. Onderdeel 3 is nog 
 
 Dit beschrijvende document is begin 2023 opgeleverd door de werkgroep voor toetsing door een grotere groep rioleringsbeheerders, adviseurs en aannemers in het voorjaar van 2023. Vervolgens zal in een aantal proefprojecten bij enkele gemeenten in samenwerking met de daar werkzame marktpartijen de specificatie van GWSW-Maatregelen getoetst worden op werkbaarheid en volledigheid. Ook zal getoetst worden welke potentiële knelpunten in beheer- en andere software zou kunnen optreden. Belangstellenden om ook in hun situatie een proefneming te doen, kunnen zich melden via gwsw@rioned.org.
 
-Beoogd is eind 2023 een verbeterde versie van deze specificatie van GWSW-Maatregelen op te leveren voor consultatie en uiteindelijk vaststelling in een volgende versie van het Gegevenswoordenboek Stedelijk Water.
+Beoogd is in 2024 een verbeterde versie van deze specificatie van GWSW-Maatregelen op te leveren voor consultatie en uiteindelijk vaststelling in een volgende versie van het Gegevenswoordenboek Stedelijk Water.
 
 De algemene beschrijving van het GWSW model vindt u op [data.gwsw.nl](https://data.gwsw.nl/). De datamodellen GWSW-Basis en Minimale Dataset (operationeel beheer), GWSW-Rib en RibX (inspectie en reiniging van leidingen, putten en kolken), GWSW-Hyd (hydraulische modellering), GWSW-Kengetallen (afvalwaterprognoses) en GWSW-Geo (GIS-toepassingen) zijn al eerder vastgestelde onderdelen van het GWSW. Een set van basistools rondom GWSW vindt u op [apps.gwsw.nl](http://apps.gwsw.nl/). Voor de details van het datamodel zie [data.gwsw.nl/maatregelen](https://data.gwsw.nl/maatregelen).
 
+## Doelstelling
+De doelstelling van deze module is tweeledig. 
+
+Enerzijds moet de module voorzien in voldoende termen en definities, zodat een beheerder voldoende inzicht heeft in de historie van uitgevoerde maatregelen op zijn objecten. Dat houdt het volgende in:
+- Welke stakeholders zijn bij welke projecten betrokken?
+- Wanneer is welke maatregel bij welk object (object = ieder mogelijk object uit de soortenboom waarop maatregelen uitgevoerd kunnen worden) uitgevoerd?
+- Welke resultaten zijn er door de genomen maatregelen bewerkstelligd (liner, reparatie, toestandsverbetering)?
+
+Anderzijds moet de module voorzien in een specificatie voor het uitwisselen van gegevens op projectniveau. Een voorbeeld specifiek voor reinigen en inspecteren is de RibX-specificatie. Hierin moet het volgende zijn opgenomen:
+- De definitie van een project waarbinnen de maatregel(en) worden uitgevoerd en waarmee een aannemer aan de slag kan. In andere woorden: het uitwisselbestand 'heen' voor een aannemer.
+- De definitie van een projectresultaat. In andere woorden: het uitwisselbestand 'terug'
+
+Een derde belangrijk onderdeel is de uitwerking van de diverse processen die het 'maatregelenproces' beschrijven (waarnemen, beoordelen, maatregelen opstellen, uitvoeren en evalueren). In dit document zullen enkele van de genoemde processen uitgewerkt worden. Een volledige uitwerking van deze processen is reeds beschreven in het [proefschrift van Aad Oomens (1992)](https://repository.tudelft.nl/islandora/object/uuid%3Ab8fbea08-0ec0-4987-85b5-bf5aa6aaec42). Vooralsnog worden deze processen niet in het GWSW opgenomen.
+
 ## Scope
-De scope van GWSW-maatregelen is beperkt tot activiteiten aan bestaande objecten. Het aanleggen van objecten valt vooralsnog buiten de scope van GWSW-Maatregelen en kan in een later stadium als uitbreiding worden meegenomen.
+
+De scope van GWSW-maatregelen is beperkt tot activiteiten aan bestaande objecten. Het aanleggen van objecten, zoals riolering aanleggen bij nieuwbouwwijken, valt vooralsnog buiten de scope van GWSW-Maatregelen en kan in een later stadium als uitbreiding worden meegenomen.
+
+Het vaststellen van een uitwisselformaat, zoals orox, csv, xml of anderszins, ligt buiten de scope van de werkgroep.
 
 ## Leeswijzer
 
@@ -58,10 +75,6 @@ In hoofdstuk 2 zijn de maatregeltypen beschreven. De conclusie uit de werkgroep 
 In hoofdstuk 3 zijn de verschillende processtappen beschreven in het beheer, onderhoud, renovatie en vervanging van de riolering en op welke momenten data-uitwisseling plaats vindt.
 
 In hoofdstuk 4 zijn de processtappen nader beschreven en is per processtap aangegeven welke data er heen en terug gestuurd dient te worden om deze processen in goede banen te leiden. De informatiebehoefte is in tabelvorm uitgewerkt.
-
-## Uitwisselformaat
-
-Dit document bevat een specificatie van de inhoudelijke gegevensbehoefte en data-uitwisseling bij de verschillende processtappen rondom het kiezen en uitvoeren van maatregelen in en aan de openbare riolering. Het beschrijft het ‘wat’. Oftewel welke data de beheerders en marktpartijen minimaal nodig hebben om hun werk goed te kunnen doen. Deze gegevensbehoefte zal worden gemodelleerd in het Gegevenswoordenboek Stedelijk Water. Vervolgens zal gespecificeerd worden hoe uitwisseling van deze data binnen de werkprocessen (processtappen) van beheerders en marktpartijen zal plaatsvinden. Daarbij zal verkend worden of naast het standaard RDF-formaat (OroX) voor alle GWSW gerelateerde data, ook een ander formaat zoals XML (RibX) noodzakelijk is om in uitwisselingsbehoefte te voorzien.
 
 # Omschrijving maatregelen
 
@@ -77,9 +90,7 @@ In de eerste (concept-)versie van GWSW-maatregelen voor vrijverval rioolleidinge
 - Vervangen
 - Verwijderen
 
-Binnen elk maatregeltype is een verdere uitsplitsing gemaakt naar de beschrijvende maatregel. De beschrijving van deze maatregelen is opgebouwd uit de samenvoeging van de maatregel met het object of met het toestandsaspect.
-
-Zo is bijvoorbeeld bij het maatregeltype vervangen onderscheid gemaakt in de subtypes:
+Voor ieder van deze maatregelen is een verdere subtypering aangebracht. In deze subtypering is veelal zijn de maatregelen opgbouwd uit de samenvoeging van de maatregel met het object of met het toestandsaspect. Zo is bijvoorbeeld bij het maatregeltype vervangen onderscheid gemaakt in de subtypes:
 -   Rioolput vergroten
 -   Rioolput vervangen
 -   Vrijverval rioolleiding vervangen
@@ -87,17 +98,18 @@ Zo is bijvoorbeeld bij het maatregeltype vervangen onderscheid gemaakt in de sub
         -   Pipe bursting
         -   Pipe eating
 
-In de aanloop naar de actualisatie van GWSW-Maatregelen is binnen de werkgroep nagedacht in hoeverre deze concept-opzet bruikbaar is. Door het maatregeltype “vervangen” te koppelen aan een fysiek object, én gebruik te maken van de headergegevens uit het GWSW-RibX, ligt de maatregel automatisch vast. Ditzelfde geldt voor maatregelen aan toestandsaspecten. Door het subtype “vrijmaken leidingprofiel” van de maatregel “Onderhouden” te koppelen aan een toestandsaspect, ligt ook hiermee automatisch vast dat het gaat om het verwijderen van een doorgestoken inlaat, wortels, afzetting of dergelijke.
+In de aanloop naar deze actualisatie van GWSW-Maatregelen is binnen de werkgroep nagedacht in hoeverre deze concept-opzet bruikbaar is. Door het maatregeltype “vervangen” te koppelen aan een fysiek object, én gebruik te maken van de headergegevens uit het GWSW-RibX, ligt de maatregel automatisch vast. Ditzelfde geldt voor maatregelen aan toestandsaspecten. Door het subtype “vrijmaken leidingprofiel” van de maatregel “Onderhouden” te koppelen aan een toestandsaspect, ligt ook hiermee automatisch vast dat het gaat om het verwijderen van een doorgestoken inlaat, wortels, afzetting of dergelijke.
 
 De conclusie uit de werkgroep is dat door de maatregel op een zo hoog mogelijk niveau in de soortenboom te beschrijven en deze te koppelen aan een object of aan een toestandsaspect, er een flinke vereenvoudiging kan plaatsvinden. Dit komt de leesbaarheid ten goede en GWSW-Maatregelen is hierdoor toekomstbestendiger omdat niet bij elke wijziging in objecttypen ook meteen de mogelijkheden binnen GWSW-Maatregelen hoeven te worden aangepast.
+
 
 # Maatregelenproces
 
 ## Te onderscheiden processtappen
 
-Binnen het proces van beheer, onderhoud, renovatie en vervangen van de riolering zijn een aantal generieke processtappen te onderscheiden. Als voorbeeld zijn in onderstaande afbeelding acties aan een kolkaansluitleiding opgenomen.
+Binnen het proces van beheer, onderhoud, renovatie en vervangen van de riolering zijn een aantal generieke processtappen te onderscheiden. Als voorbeeld zijn in onderstaande afbeelding acties aan bijvoorbeeld een kolkaansluitleiding opgenomen.
 
-<img src="media/image7.png" style="width:5.90486in;height:2.31667in" />
+<img src="media/tijdlijn.svg" />
 
 Afbeelding: Voorbeeld acties aan kolkaansluitleiding (Afbeelding afkomstig van Wouter van Riel.)
 
