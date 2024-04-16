@@ -187,437 +187,68 @@ De opdrachtnemer ontvangt van de opdrachtgever het gevuld GWSW-RibX bestand met 
 Informatie-uitwisseling stap 3
 
 <table>
-<caption>sdf</caption>
-<thead>
-<tr class="header">
-<th><strong>Stap 3: beoordelen inspectie / opstellen maatregeladvies</strong></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Veld</strong></td>
-<td><strong>Heen</strong></td>
-<td><strong>Terug</strong></td>
-<td><strong>Naam</strong></td>
-<td><strong>Toelichting (geen = conform EN 13508-2)</strong></td>
-<td><strong>Betreft</strong></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Functiereferentie werkgever</td>
-<td>Opdrachtcode van opdrachtgever (bestaand veld in RibX)</td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Naam adviseur</td>
-<td>Naam beoordelaar en bedrijf</td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Functiereferentie adviseur</td>
-<td>Opdrachtcode van het bedrijf van de beoordelaar</td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Datum</td>
-<td>Datum van oplevering van de beoordeling</td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Oorsprong maatregel</td>
-<td><p>1. Geautomatiseerd toegekend (codes vergelijken)</p>
-<p>2. Nader inhoudelijk toegekend (bekijken beeldmateriaal)</p></td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Inventarisatiegegevens (RibX header A, C en E-codes)</td>
-<td>Betreft de headergegevens van de objecten</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td><p>Inspectiegegevens (RibX B, D en F-codes)</p>
-<p><em>Bestaat uit identificatiecodes van put of leiding en waarnemingen</em></p></td>
-<td><p>Betreft de volledige inspectie van objecten die voor beoordeling in aanmerking komen.</p>
-<p><em>Bij maatregelen op toestandsaspecten dienen de riool- en waarneming records hiervan in het terug-bestand te worden geleverd.</em></p></td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Beoordelingscriteria</td>
-<td>Minimale Ingrijp- en waarschuwingsmaatstaven</td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Datum / versie beoordelingscriteria</td>
-<td></td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>O</td>
-<td>A</td>
-<td>Randvoorwaarden beoordeling</td>
-<td><p>Bijvoorbeeld voorgenomen reconstructies / clustervorming</p>
-<p>De waarde “geen” gebruiken indien er geen aanvullende randvoorwaarden gelden.</p>
-<p>1 = Geen</p>
-<p>2 = Klachten</p>
-<p>3 = Wegbeheer</p>
-<p>4 = Hydraulische knelpunten</p>
-<p>5 = Nieuwbouwlocatie</p>
-<p>6 = Beleid o.a. materialen-duurzaamheid-circulariteit</p></td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Datum / versie randvoorwaarden beoordeling</td>
-<td></td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Maatregel (op (deel)object)</td>
-<td><p>De maatregel (Activiteit) registreren in de headergegevens.</p>
-<p><em>Bij een maatregel op een deelobject altijd het deel van het object benoemen waar het om gaat. Bijvoorbeeld aanbrengen van een stroomprofiel, vervangen putafdekking, etc.</em></p>
-<p><em>(let wel: deze hebben veel subtypes in het concept GWSW-Maatregelen wat nu geprogrammeerd is)</em></p>
-<p>0 = Geen</p>
-<p><del>1 = Aanleggen (NIET GEBRUIKEN)</del></p>
-<p>2 = Buiten gebruik stellen</p>
-<p>3 = Conserveren</p>
-<p><del>4 = Onderhoud (N.V.T.)</del></p>
-<p>5 = Onderzoeken</p>
-<p>6 = Renoveren</p>
-<p><del>7 = Repareren (N.V.T.)</del></p>
-<p>8 = Verbeteren</p>
-<p>9 = Vervangen</p>
-<p>10 = Verwijderen</p></td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Maatregel (op toestandsaspect)</td>
-<td><p>De maatregel (activiteit) registreren in de waarnemingen in RibX?.</p>
-<p>Er zijn meerdere maatregelen op 1 toestandsaspect mogelijk.</p>
-<p><em>Bij een toestandsaspect binnen een ingrijpmaatstaf welke niet tot een maatregel leidt, de waarde “geen” vermelden.</em></p>
-<p><em>(let wel: deze hebben veel subtypes in het concept GWSW-Maatregelen wat nu geprogrammeerd is)</em></p>
-<p>0 = Geen</p>
-<p><del>1 = Aanleggen (N.V.T.)</del></p>
-<p><del>2 = Buiten gebruik stellen (N.V.T.)</del></p>
-<p><del>3 = Conserveren (N.V.T.)</del></p>
-<p>4 = Onderhouden</p>
-<p>4.1. Vrijmaken leidingprofiel</p>
-<p>4.2. Vrijmaken putprofiel</p>
-<p><del>5 = Onderzoeken (N.V.T.)</del></p>
-<p><del>6 = Renoveren (N.V.T.)</del></p>
-<p>7 = Repareren</p>
-<p>7.1. Beton repareren</p>
-<p>7.2. Injecteren</p>
-<p>7.3. Deelliner plaatsen</p>
-<p>7.4. Manchet plaatsen</p>
-<p>7.5. Metselwerkvoegen herstellen</p>
-<p>7.6. Omstorten, met beton</p>
-<p><del>8 = Verbeteren (N.V.T.)</del></p>
-<p><del>9 = Vervangen (N.V.T.)</del></p>
-<p><del>10 = Verwijderen (N.V.T.)</del></p></td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td> </td>
-<td>O</td>
-<td>Opmerking maatregel (op -onderdeel van het- object)</td>
-<td>Betreft de opmerking van de beoordelaar, clustering altijd vermelden</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td> </td>
-<td>O</td>
-<td>Opmerking maatregel (op toestandsaspect)</td>
-<td>Betreft de opmerking van de beoordelaar, bijvoorbeeld foutieve toestandsaspecten</td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>A</td>
-<td>Uitvoeringsperiode maatregel op -onderdeel van het- object)</td>
-<td>Betreft de beoogde uitvoeringsperiode naar aanleiding van de beoordeling</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>A</td>
-<td>Uitvoeringsperiode maatregel (op toestandsaspect)</td>
-<td>Betreft de beoogde uitvoeringsperiode naar aanleiding van de beoordeling</td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>O</td>
-<td>A</td>
-<td>Toekomstig materiaal</td>
-<td>Terug: Alleen bij vervangen van een (deel)object of aanleg van deelobjecten. Aanleg van een volledig object valt hier buiten</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>O</td>
-<td>A</td>
-<td>Toekomstige vorm</td>
-<td>Terug: Alleen bij vervangen van volledig object (leiding of put)</td>
-<td>H</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>O</td>
-<td>A</td>
-<td>Toekomstige breedte</td>
-<td>Terug: Alleen bij vervangen van volledig object (leiding of put)</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>O</td>
-<td>A</td>
-<td>Toekomstige hoogte</td>
-<td>Terug: Alleen bij vervangen van volledig object (leiding of put)</td>
-<td>H</td>
-</tr>
-</tbody>
+<caption>Stap 3: beoordelen inspectie / opstellen maatregeladvies</caption>
 </table>
 
-.
+| Veld | Heen | Terug | Naam                                                              | Betreft | Toelichting (geen = conform EN 13508-2)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|------|------|-------|-------------------------------------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| S    | A    | A     | Functiereferentie werkgever                                       | P       | Opdrachtcode van opdrachtgever (bestaand veld in RibX)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 2xS  | A    | A     | Naam adviseur                                                     | P       | Naam beoordelaar en bedrijf                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| S    | A    | A     | Functiereferentie adviseur                                        | P       | Opdrachtcode van het bedrijf van de beoordelaar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| D    | A    | A     | Datum                                                             | P       | Datum van oplevering van de beoordeling                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| L=1  | A    | A     | Oorsprong maatregel                                               | P       | 1. Geautomatiseerd toegekend (codes vergelijken)<br> 2. Nader inhoudelijk toegekend (bekijken beeldmateriaal)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| URI  | A    | A     | Inventarisatiegegevens (RibX header A, C en E-codes)              | H       | Betreft de headergegevens van de objecten                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| URI  | A    | A     | Inspectiegegevens (RibX B, D en F-codes)                          | T       | Betreft de volledige inspectie van objecten die voor beoordeling in aanmerking komen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| URI  | A    | A     | Bestaat uit identificatiecodes van put of leiding en waarnemingen | T       | Bij maatregelen op toestandsaspecten dienen de riool- en waarneming records hiervan in het terug-bestand te worden geleverd.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| URI  | A    | A     | Beoordelingscriteria                                              | P       | Minimale Ingrijp- en waarschuwingsmaatstaven                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| D+S  | A    | A     | Datum / versie beoordelingscriteria                               | P       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| L=n  | O    | A     | Randvoorwaarden beoordeling                                       | P       | Bijvoorbeeld voorgenomen reconstructies / clustervorming<br> De waarde “geen” gebruiken indien er geen aanvullende randvoorwaarden gelden.<br> 1 = Geen<br> 2 = Klachten<br> 3 = Wegbeheer<br> 4 = Hydraulische knelpunten<br> 5 = Nieuwbouwlocatie<br> 6 = Beleid o.a. materialen-duurzaamheid-circulariteit                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| D+S  | A    | A     | Datum / versie randvoorwaarden beoordeling                        | P       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| L=1  | A    | A     | Maatregel (op (deel)object)                                       | H       | De maatregel (Activiteit) registreren in de headergegevens.<br> Bij een maatregel op een deelobject altijd het deel van het object benoemen waar het om gaat. Bijvoorbeeld aanbrengen van een stroomprofiel, vervangen putafdekking, etc.<br> (let wel: deze hebben veel subtypes in het concept GWSW-Maatregelen wat nu geprogrammeerd is)<br> 0 = Geen<br> ~~1 = Aanleggen (NIET GEBRUIKEN)~~<br> 2 = Buiten gebruik stellen<br> 3 = Conserveren<br> ~~4 = Onderhoud (N.V.T.)~~<br> 5 = Onderzoeken<br> 6 = Renoveren<br> ~~7 = Repareren (N.V.T.)~~<br> 8 = Verbeteren<br> 9 = Vervangen<br> 10 = Verwijderen                                                                                                                                                                                                                                                                                                                  |
+| L=n  | A    | A     | Maatregel (op toestandsaspect)                                    | T       | De maatregel (activiteit) registreren in de waarnemingen in RibX?.<br> Er zijn meerdere maatregelen op 1 toestandsaspect mogelijk.<br> Bij een toestandsaspect binnen een ingrijpmaatstaf welke niet tot een maatregel leidt, de waarde “geen” vermelden.<br> (let wel: deze hebben veel subtypes in het concept GWSW-Maatregelen wat nu geprogrammeerd is)<br> 0 = Geen<br> ~~1 = Aanleggen (N.V.T.)~~<br> ~~2 = Buiten gebruik stellen (N.V.T.)~~<br> ~~3 = Conserveren (N.V.T.)~~<br> 4 = Onderhouden<br> 4.1. Vrijmaken leidingprofiel<br> 4.2. Vrijmaken putprofiel<br> ~~5 = Onderzoeken (N.V.T.)~~<br> ~~6 = Renoveren (N.V.T.)~~<br> 7 = Repareren<br> 7.1. Beton repareren<br> 7.2. Injecteren<br> 7.3. Deelliner plaatsen<br> 7.4. Manchet plaatsen<br> 7.5. Metselwerkvoegen herstellen<br> 7.6. Omstorten, met beton<br> ~~8 = Verbeteren (N.V.T.)~~<br> ~~9 = Vervangen (N.V.T.)~~<br> ~~10 = Verwijderen (N.V.T.)~~ |
+| S    | A    | O     | Opmerking maatregel (op -onderdeel van het- object)               | H       | Betreft de opmerking van de beoordelaar, clustering altijd vermelden                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| S    | A    | O     | Opmerking maatregel (op toestandsaspect)                          | T       | Betreft de opmerking van de beoordelaar, bijvoorbeeld foutieve toestandsaspecten                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| DbDe | A    | A     | Uitvoeringsperiode maatregel op -onderdeel van het- object)       | H       | Betreft de beoogde uitvoeringsperiode naar aanleiding van de beoordeling                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| DbDe | A    | A     | Uitvoeringsperiode maatregel (op toestandsaspect)                 | T       | Betreft de beoogde uitvoeringsperiode naar aanleiding van de beoordeling                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| DbDe | O    | A     | Toekomstig materiaal                                              | H       | Terug: Alleen bij vervangen van een (deel)object of aanleg van deelobjecten. Aanleg van een volledig object valt hier buiten                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| DbDe | O    | A     | Toekomstige vorm                                                  | H       | Terug: Alleen bij vervangen van volledig object (leiding of put)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| DbDe | O    | A     | Toekomstige breedte                                               | H       | Terug: Alleen bij vervangen van volledig object (leiding of put)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| DbDe | O    | A     | Toekomstige hoogte                                                | H       | Terug: Alleen bij vervangen van volledig object (leiding of put)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+
+
 
 Stap 4: Vaststellen maatregelplan
 ---------------------------------
 
 De controleur stelt aan de hand van het maatregeladvies uit stap 3 de definitieve maatregel vast. Voor zover uit de controle van het maatregeladvies een afwijking ten opzichte van het maatregeladvies volgt, dient dit altijd met een opmerking te worden toegelicht. Op die manier is terug te vinden waarom van een advies is afgeweken. Is de definitieve maatregel gelijk aan de geadviseerde maatregel, dan kan dit veld leeg blijven. Het resultaat van stap 4 is een maatregelplan waarin de definitieve maatregelen staan opgenomen.
 
-Tabel : Informatie-uitwisseling stap 4
-
 <table>
-<thead>
-<tr class="header">
-<th><strong>Stap 4: Vaststellen definitieve maatregel (toegevoegde velden tov stap 3)</strong></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Veld</strong></td>
-<td><strong>Heen</strong></td>
-<td><strong>Terug</strong></td>
-<td><strong>Naam</strong></td>
-<td><strong>Toelichting (geen = conform EN 13508-2)</strong></td>
-<td><strong>Betreft</strong></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Functiereferentie werkgever</td>
-<td>Opdrachtcode van opdrachtgever (bestaand veld in RibX)</td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Datum</td>
-<td><p>Heen: Datum van oplevering van de beoordeling</p>
-<p>Terug: Datum van vaststellen definitieve maatregel</p></td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Oorsprong maatregel</td>
-<td><p>1. Geautomatiseerd toegekend (codes vergelijken)</p>
-<p>2. Nader inhoudelijk toegekend (bekijken beeldmateriaal)</p></td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Inventarisatiegegevens (RibX header A, C en E-codes)</td>
-<td>Betreft de headergegevens van de objecten</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td><p>Inspectiegegevens (RibX B, D en F-codes)</p>
-<p><em>Bestaat uit identificatiecodes van put of leiding en waarnemingen</em></p></td>
-<td><p>Betreft de volledige inspectie van objecten die voor beoordeling in aanmerking komen.</p>
-<p><em>Bij maatregelen op toestandsaspecten dienen de riool- en waarneming records hiervan in het terug-bestand te worden geleverd.</em></p></td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Beoordelingscriteria</td>
-<td><p>Minimale Ingrijp- en waarschuwingsmaatstaven</p>
-<p>Afwijkingen tov stap 3 verplicht vermelden; anders “heen” ook mee “terug” leveren</p></td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Datum / versie beoordelingscriteria</td>
-<td>Afwijkingen tov stap 3 verplicht vermelden</td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Randvoorwaarden beoordeling</td>
-<td>Afwijkingen tov stap 3 verplicht vermelden</td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Datum / versie randvoorwaarden beoordeling</td>
-<td>Afwijkingen tov stap 3 verplicht vermelden</td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Maatregel (op (deel)object)</td>
-<td><p>Heen: Het maatregeladvies uit stap 3</p>
-<p>Terug: Betreft in stap 4 de definitieve maatregel (op -onderdeel van het- object) na controle door de controleur.</p></td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Maatregel (op toestandsaspect)</td>
-<td><p>Heen: Het maatregeladvies uit stap 3</p>
-<p>Terug: Betreft in stap 4 de definitieve maatregel (op toestandsaspect) na controle door de controleur</p></td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Opmerking maatregel (op (deel)object)</td>
-<td>Verplicht veld in stap 4 indien de definitieve maatregel af wijkt van het maatregeladvies uit stap 3.</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Opmerking maatregel (op toestandsaspect)</td>
-<td>Verplicht veld in stap 4 indien de definitieve maatregel af wijkt van het maatregeladvies uit stap 3.</td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Uitvoeringsjaar maatregel (op (deel)object)</td>
-<td><p>Betreft het beoogd uitvoeringsjaar van de definitieve maatregel</p>
-<p>Deze kan afwijken van het maatregeladvies</p></td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Uitvoeringsjaar maatregel (op toestandsaspect)</td>
-<td><p>Betreft het beoogd uitvoeringsjaar van de definitieve maatregel</p>
-<p>Deze kan afwijken van het maatregeladvies</p></td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>O</td>
-<td>A</td>
-<td>Toekomstig materiaal</td>
-<td>Alleen bij vervangen van een (deel)object of aanleg van deelobjecten. Aanleg van een volledig object valt hier buiten. Afwijkingen ten opzichte van stap 3 verplicht vermelden</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td> </td>
-<td>O</td>
-<td>A</td>
-<td>Toekomstige vorm</td>
-<td>Alleen bij vervangen van volledig object (leiding of put)<br />
-Afwijkingen ten opzichte van stap 3 verplicht vermelden</td>
-<td>H</td>
-</tr>
-<tr class="odd">
-<td> </td>
-<td>O</td>
-<td>A</td>
-<td>Toekomstige breedte</td>
-<td>Alleen bij vervangen van volledig object (leiding of put)<br />
-Afwijkingen ten opzichte van stap 3 verplicht vermelden</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td> </td>
-<td>O</td>
-<td>A</td>
-<td>Toekomstige hoogte</td>
-<td>Alleen bij vervangen van volledig object (leiding of put)<br />
-Afwijkingen ten opzichte van stap 3 verplicht vermelden</td>
-<td>H</td>
-</tr>
-</tbody>
+<caption>Stap 4: Vaststellen definitieve maatregel (toegevoegde velden tov stap 3)</caption>
 </table>
+
+|Veld|Heen|Terug|Naam                                                             |Betreft|Toelichting (geen = conform EN 13508-2)                                                                                                                                       |
+|----|----|-----|-----------------------------------------------------------------|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|S   |A   |A    |Functiereferentie werkgever                                      |P      |Opdrachtcode van opdrachtgever (bestaand veld in RibX)                                                                                                                        |
+|D   |A   |A    |Datum                                                            |P      |Heen: Datum van oplevering van de beoordeling<br> Terug: Datum van vaststellen definitieve maatregel                                                                          |
+|L=1 |A   |A    |Oorsprong maatregel                                              |P      |1. Geautomatiseerd toegekend (codes vergelijken)<br> 2. Nader inhoudelijk toegekend (bekijken beeldmateriaal)                                                                 |
+|URI |A   |A    |Inventarisatiegegevens (RibX header A, C en E-codes)             |H      |Betreft de headergegevens van de objecten                                                                                                                                     |
+|URI |A   |A    |Inspectiegegevens (RibX B, D en F-codes)                         |T      |Betreft de volledige inspectie van objecten die voor beoordeling in aanmerking komen.                                                                                         |
+|URI |A   |A    |Bestaat uit identificatiecodes van put of leiding en waarnemingen|T      |Bij maatregelen op toestandsaspecten dienen de riool- en waarneming records hiervan in het terug-bestand te worden geleverd.                                                  |
+|URI |A   |A    |Beoordelingscriteria                                             |P      |Minimale Ingrijp- en waarschuwingsmaatstaven <br> Afwijkingen tov stap 3 verplicht vermelden; anders “heen” ook mee “terug” leveren                                           |
+|D+S |A   |A    |Datum / versie beoordelingscriteria                              |P      |Afwijkingen tov stap 3 verplicht vermelden                                                                                                                                    |
+|L=n |A   |A    |Randvoorwaarden beoordeling                                      |P      |Afwijkingen tov stap 3 verplicht vermelden                                                                                                                                    |
+|D+S |A   |A    |Datum / versie randvoorwaarden beoordeling                       |P      |Afwijkingen tov stap 3 verplicht vermelden                                                                                                                                    |
+|L=1 |A   |A    |Maatregel (op (deel)object)                                      |H      |Heen: Het maatregeladvies uit stap 3<br> Terug: Betreft in stap 4 de definitieve maatregel (op -onderdeel van het- object) na controle door de controleur.                    |
+|L=n |A   |A    |Maatregel (op toestandsaspect)                                   |T      |Heen: Het maatregeladvies uit stap 3<br> Terug: Betreft in stap 4 de definitieve maatregel (op toestandsaspect) na controle door de controleur                                |
+|S   |A   |A    |Opmerking maatregel (op (deel)object)                            |H      |Verplicht veld in stap 4 indien de definitieve maatregel af wijkt van het maatregeladvies uit stap 3.                                                                         |
+|S   |A   |A    |Opmerking maatregel (op toestandsaspect)                         |T      |Verplicht veld in stap 4 indien de definitieve maatregel af wijkt van het maatregeladvies uit stap 3.                                                                         |
+|DbDe|A   |A    |Uitvoeringsjaar maatregel (op (deel)object)                      |H      |Betreft het beoogd uitvoeringsjaar van de definitieve maatregel<br> Deze kan afwijken van het maatregeladvies                                                                 |
+|DbDe|A   |A    |Uitvoeringsjaar maatregel (op toestandsaspect)                   |T      |Betreft het beoogd uitvoeringsjaar van de definitieve maatregel<br> Deze kan afwijken van het maatregeladvies                                                                 |
+|DbDe|O   |A    |Toekomstig materiaal                                             |H      |Alleen bij vervangen van een (deel)object of aanleg van deelobjecten. Aanleg van een volledig object valt hier buiten. Afwijkingen ten opzichte van stap 3 verplicht vermelden|
+|DbDe|O   |A    |Toekomstige vorm                                                 |H      |Alleen bij vervangen van volledig object (leiding of put)<br> Afwijkingen ten opzichte van stap 3 verplicht vermelden                                                         |
+|DbDe|O   |A    |Toekomstige breedte                                              |H      |Alleen bij vervangen van volledig object (leiding of put)<br> Afwijkingen ten opzichte van stap 3 verplicht vermelden                                                         |
+|DbDe|O   |A    |Toekomstige hoogte                                               |H      |Alleen bij vervangen van volledig object (leiding of put)<br> Afwijkingen ten opzichte van stap 3 verplicht vermelden                                                         |
+
 
 Stap 5: Opstellen contract ten behoeve van uitvoering
 -----------------------------------------------------
@@ -632,682 +263,125 @@ Bij vervanging van (deel)objecten dienen gegevens van het nieuwe (deel)object te
 
 Het kan voorkomen dat de definitieve maatregel uit stap 4 niet de uiteindelijke maatregel is welke in het contract opgenomen wordt. In dat geval dient de maatregel te worden aangepast en dient middels een opmerking de motivatie van deze wijziging te worden vermeld. Het resultaat van stap 5 is een contract dat uitgevoerd kan worden.
 
-Tabel : Informatie-uitwisseling stap 5
-
 <table>
-<thead>
-<tr class="header">
-<th><strong>Stap 5: Opstellen contract (toegevoegde velden tov stap 4)</strong></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Veld</strong></td>
-<td><strong>Heen</strong></td>
-<td><strong>Terug</strong></td>
-<td><strong>Naam</strong></td>
-<td><strong>Toelichting (geen = conform EN 13508-2)</strong></td>
-<td><strong>Betreft</strong></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Functiereferentie werkgever</td>
-<td>Opdrachtcode van opdrachtgever (bestaand veld in RibX)</td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Inventarisatiegegevens (RibX header A, C en E-codes)</td>
-<td>Betreft de headergegevens van de objecten <em>(of een selectie van objecten) die in het contract worden opgenomen</em></td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td><p>Inspectiegegevens (RibX B, D en F-codes)</p>
-<p><em>Bestaat uit identificatiecodes van put of leiding en waarnemingen</em></p></td>
-<td><p>Betreft de volledige inspectie van objecten die voor beoordeling in aanmerking komen.</p>
-<p><em>Bij maatregelen op toestandsaspecten dienen de riool- en waarneming records hiervan in het terug-bestand te worden geleverd.</em></p></td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Beoordelingscriteria</td>
-<td>Afwijkingen ten opzichte van stap 4 verplicht vermelden</td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Datum / versie beoordelingscriteria</td>
-<td>Afwijkingen ten opzichte van stap 4 verplicht vermelden</td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Randvoorwaarden beoordeling</td>
-<td>Afwijkingen ten opzichte van stap 4 verplicht vermelden</td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Datum / versie randvoorwaarden beoordeling</td>
-<td>Afwijkingen ten opzichte van stap 4 verplicht vermelden</td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Maatregel (op (deel)object)</td>
-<td><p>Heen: de definitieve maatregel uit stap 4</p>
-<p>Terug: Betreft in stap 5 de maatregel (op (deel)object) welke in het contract wordt opgenomen. De contractmaatregel kan afwijken van de definitieve maatregel uit stap 4.</p></td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Maatregel (op toestandsaspect)</td>
-<td><p>Heen: de definitieve maatregel uit stap 4</p>
-<p>Terug: Betreft in stap 5 de maatregel (op toestandsaspect) welke in het contract wordt opgenomen. De contractmaatregel kan afwijken van de definitieve maatregel uit stap 4.</p></td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Opmerking maatregel (op (deel)object)</td>
-<td>Verplicht veld in stap 5 indien de contractmaatregel af wijkt van de definitieve maatregel uit stap 4.</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Opmerking maatregel (op toestandsaspect)</td>
-<td>Verplicht veld in stap 5 indien de contractmaatregel af wijkt van de definitieve maatregel uit stap 4.</td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>A</td>
-<td>Uitvoeringsjaar maatregel op (deel)object)</td>
-<td>Betreft het beoogd uitvoeringsjaar volgens (meerjaren)contract</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>A</td>
-<td>Uitvoeringsjaar maatregel (op toestandsaspect)</td>
-<td>Betreft het beoogd uitvoeringsjaar volgens (meerjaren)contract</td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Toekomstig materiaal</td>
-<td><p>Alleen bij vervangen van een (deel)object of aanleg van deelobjecten. Aanleg van een volledig object valt hier buiten.</p>
-<p>Afwijkingen ten opzichter van stap 4 verplicht vermelden</p></td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Toekomstige vorm</td>
-<td><p>Alleen bij vervangen van volledig object (leiding of put)</p>
-<p>Afwijkingen ten opzichte van stap 4 verplicht vermelden</p></td>
-<td>H</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Toekomstige breedte</td>
-<td><p>Alleen bij vervangen van volledig object (leiding of put)</p>
-<p>Afwijkingen ten opzichte van stap 4 verplicht vermelden</p></td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Toekomstige hoogte</td>
-<td><p>Alleen bij vervangen van volledig object (leiding of put)</p>
-<p>Afwijkingen ten opzichte van stap 4 verplicht vermelden</p></td>
-<td>H</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Naam opsteller</td>
-<td>Naam van de opsteller van het contract</td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Functiereferentie opsteller</td>
-<td>Opdrachtcode van het bedrijf van de opsteller</td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Datum contract</td>
-<td><em> </em></td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td> </td>
-<td>A</td>
-<td><p>Kenmerk contract</p>
-<p><em>(Code en omschrijving)</em></p></td>
-<td><em> </em></td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>O</td>
-<td>A</td>
-<td>Contractvorm</td>
-<td><p>Keuze op basis van een codelijst definiëren:</p>
-<p>1 = RAW-bestek</p>
-<p>2 = RAW-raamovereenkomst</p>
-<p>3 = Programma van Eisen</p>
-<p>4 = ????</p></td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>O</td>
-<td>A</td>
-<td>Parameters t.b.v. ontwerp relinen</td>
-<td>Geldt voor relinen van leidingen en ook voor putten</td>
-<td>H</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>O</td>
-<td>O</td>
-<td>Bestekspostnummer</td>
-<td>Om de link te leggen tussen maatregel en het contract c.q. verrekening van de uitgevoerde maatregel</td>
-<td>H/T</td>
-</tr>
-</tbody>
+<caption>Stap 5: Opstellen contract (toegevoegde velden tov stap 4)</caption>
 </table>
+
+|Veld|Heen|Terug|Naam                                                             |Betreft|Toelichting (geen = conform EN 13508-2)                                                                                                                                       |
+|----|----|-----|-----------------------------------------------------------------|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|S   |A   |A    |Functiereferentie werkgever                                      |P      |Opdrachtcode van opdrachtgever (bestaand veld in RibX)                                                                                                                        |
+|URI |A   |A    |Inventarisatiegegevens (RibX header A, C en E-codes)             |H      |Betreft de headergegevens van de objecten (of een selectie van objecten) die in het contract worden opgenomen                                                                 |
+|URI |A   |A    |Inspectiegegevens (RibX B, D en F-codes)                         |T      |Betreft de volledige inspectie van objecten die voor beoordeling in aanmerking komen.                                                                                         |
+|URI |A   |A    |Bestaat uit identificatiecodes van put of leiding en waarnemingen|T      |Bij maatregelen op toestandsaspecten dienen de riool- en waarneming records hiervan in het terug-bestand te worden geleverd.                                                  |
+|URI |A   |A    |Beoordelingscriteria                                             |P      |Afwijkingen ten opzichte van stap 4 verplicht vermelden                                                                                                                       |
+|D+S |A   |A    |Datum / versie beoordelingscriteria                              |P      |Afwijkingen ten opzichte van stap 4 verplicht vermelden                                                                                                                       |
+|L=n |A   |A    |Randvoorwaarden beoordeling                                      |P      |Afwijkingen ten opzichte van stap 4 verplicht vermelden                                                                                                                       |
+|D+S |A   |A    |Datum / versie randvoorwaarden beoordeling                       |P      |Afwijkingen ten opzichte van stap 4 verplicht vermelden                                                                                                                       |
+|L=1 |A   |A    |Maatregel (op (deel)object)                                      |H      |Heen: de definitieve maatregel uit stap 4<br> Terug: Betreft in stap 5 de maatregel (op (deel)object) welke in het contract wordt opgenomen. De contractmaatregel kan afwijken van de definitieve maatregel uit stap 4.|
+|L=n |A   |A    |Maatregel (op toestandsaspect)                                   |T      |Heen: de definitieve maatregel uit stap 4<br> Terug: Betreft in stap 5 de maatregel (op toestandsaspect) welke in het contract wordt opgenomen. De contractmaatregel kan afwijken van de definitieve maatregel uit stap 4.|
+|S   |A   |A    |Opmerking maatregel (op (deel)object)                            |H      |Verplicht veld in stap 5 indien de contractmaatregel af wijkt van de definitieve maatregel uit stap 4.                                                                        |
+|S   |A   |A    |Opmerking maatregel (op toestandsaspect)                         |T      |Verplicht veld in stap 5 indien de contractmaatregel af wijkt van de definitieve maatregel uit stap 4.                                                                        |
+|DbDe|A   |A    |Uitvoeringsjaar maatregel op (deel)object)                       |H      |Betreft het beoogd uitvoeringsjaar volgens (meerjaren)contract                                                                                                                |
+|DbDe|A   |A    |Uitvoeringsjaar maatregel (op toestandsaspect)                   |T      |Betreft het beoogd uitvoeringsjaar volgens (meerjaren)contract                                                                                                                |
+|DbDe|A   |A    |Toekomstig materiaal                                             |H      |Alleen bij vervangen van een (deel)object of aanleg van deelobjecten. Aanleg van een volledig object valt hier buiten.<br> Afwijkingen ten opzichter van stap 4 verplicht vermelden|
+|DbDe|A   |A    |Toekomstige vorm                                                 |H      |Alleen bij vervangen van volledig object (leiding of put)<br> Afwijkingen ten opzichte van stap 4 verplicht vermelden                                                         |
+|DbDe|A   |A    |Toekomstige breedte                                              |H      |Alleen bij vervangen van volledig object (leiding of put)<br> Afwijkingen ten opzichte van stap 4 verplicht vermelden                                                         |
+|DbDe|A   |A    |Toekomstige hoogte                                               |H      |Alleen bij vervangen van volledig object (leiding of put)<br> Afwijkingen ten opzichte van stap 4 verplicht vermelden                                                         |
+|S   |A   |A    |Naam opsteller                                                   |P      |Naam van de opsteller van het contract                                                                                                                                        |
+|S   |A   |A    |Functiereferentie opsteller                                      |P      |Opdrachtcode van het bedrijf van de opsteller                                                                                                                                 |
+|D   |A   |A    |Datum contract                                                   |P      |                                                                                                                                                                              |
+|S   |A   |A    |Kenmerk contract                                                 |P      |                                                                                                                                                                              |
+
 
 Stap 6: Uitvoering maatregelen
 ------------------------------
 
-De opdrachtnemer vult dat ten aanzien van de uitgevoerde maatregelen aan. De datbehoefte is sterk afhankelijk of het gaat om een maatregel op een (deel)object of een toestandsaspect. Tijdens de uitvoering kan het zijn dat de maatregel die in het contract is opgenomen, in de praktijk niet uitvoerbaar en dus aangepast dient te worden. In dat geval dient dit bij de opmerking te worden gemotiveerd. Dit geldt tevens indien een maatregel binnen de opdracht niet uitvoerbaar blijkt te zijn en er geen maatregel is uitgevoerd.
+De opdrachtnemer vult informatie ten aanzien van de uitgevoerde maatregelen aan. De informatiebehoefte is sterk afhankelijk of het gaat om een maatregel op een (deel)object of een toestandsaspect. Tijdens de uitvoering kan het zijn dat de maatregel die in het contract is opgenomen, in de praktijk niet uitvoerbaar is en dus aangepast dient te worden. In dat geval dient dit bij de opmerking te worden gemotiveerd. Dit geldt tevens indien een maatregel binnen de opdracht niet uitvoerbaar blijkt te zijn en er geen maatregel is uitgevoerd.
 
 Door een opleveringsinspectie te verlangen, krijgt de opdrachtgever automatisch via waarnemingen de uitgevoerde maatregelen terug. Dit geldt niet voor maatregelen die van buitenaf uitgevoerd zijn. Daarvoor dienen de gegevens handmatig te worden gevuld.
 
-Tabel : Informatie-uitwisseling stap 6
 
 <table>
-<thead>
-<tr class="header">
-<th><strong>Stap 6: Uitvoering maatregelen (toegevoegde velden tov stap 5)</strong></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Veld</strong></td>
-<td><strong>Heen</strong></td>
-<td><strong>Terug</strong></td>
-<td><strong>Naam</strong></td>
-<td><strong>Toelichting (geen = conform EN 13508-2)</strong></td>
-<td><strong>Betreft</strong></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Functiereferentie werkgever</td>
-<td>Opdrachtcode van opdrachtgever (bestaand veld in RibX)</td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Inventarisatiegegevens (RibX header A, C en E-codes)</td>
-<td>Betreft de headergegevens van de objecten<br />
-<em>Selectie van objecten die in het contract worden opgenomen</em></td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td><p>Inspectiegegevens (RibX B, D en F-codes)</p>
-<p><em>Bestaat uit identificatiecodes van put of leiding en waarnemingen</em></p></td>
-<td><p>Betreft de volledige inspectie van objecten die voor beoordeling in aanmerking komen.</p>
-<p><em>Bij maatregelen op toestandsaspecten dienen de riool- en waarneming records hiervan in het terug-bestand te worden geleverd.</em></p></td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Maatregel (op (deel)object)</td>
-<td>Heen: De contractmaatregel uit stap 5<br />
-Terug: Betreft in stap 6 de uitgevoerde maatregel (op (deel)object). Deze kan afwijken van de contractmaatregel</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Maatregel (op toestandsaspect)</td>
-<td>Heen: De contractmaatregel uit stap 5<br />
-Terug: Betreft in stap 6 de uitgevoerde maatregel (op toestandsaspect). Deze kan afwijken van de contractmaatregel</td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Opmerking maatregel (op (deel)object)</td>
-<td>Verplicht veld in stap 6 indien de uitgevoerde maatregel af wijkt van de contractmaatregel uit stap 5.</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Opmerking maatregel (op toestandsaspect)</td>
-<td>Verplicht veld in stap 6 indien de uitgevoerde maatregel af wijkt van de contractmaatregel uit stap 5.</td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Materiaal / UITGEVOERD</td>
-<td><p>Alleen bij vervangen van een (deel)object of aanleg van deelobjecten. Aanleg van een volledig object valt hier buiten.</p>
-<p>(In RibX update van veld ACD)</p></td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Vorm / UITGEVOERD</td>
-<td><p>Alleen bij vervangen van volledig object (leiding of put). Aanleg van een volledig object valt hier buiten.</p>
-<p>(In RibX update van veld ACA)</p></td>
-<td>H</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Breedte / UITGEVOERD</td>
-<td><p>Alleen bij vervangen van volledig object (leiding of put). Aanleg van een volledig object valt hier buiten.</p>
-<p>(In RibX update van veld ACC)</p></td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Hoogte / UITGEVOERD</td>
-<td><p>Alleen bij vervangen van volledig object (leiding of put). Aanleg van een volledig object valt hier buiten.</p>
-<p>(In RibX update van veld ACB)</p></td>
-<td>H</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Naam opsteller</td>
-<td>Naam van de opsteller van het contract</td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Functiereferentie opsteller</td>
-<td>Opdrachtcode van het bedrijf van de opsteller</td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Datum contract</td>
-<td></td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Kenmerk contract<br />
-<em>Code en omschrijving</em></td>
-<td></td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Contractvorm</td>
-<td></td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Parameters t.b.v. ontwerp relinen</td>
-<td>Geldt voor relinen leidingen en ook voor putten</td>
-<td>H</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>O</td>
-<td>A</td>
-<td>Ontwerp liner</td>
-<td>Betreft de ontwerpberekening met wanddiktes, gedeclareerde waarden en certificering</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>O</td>
-<td>O</td>
-<td>Bestekspostnummer)</td>
-<td>Om de link te leggen tussen maatregel en het contract c.q. verrekening van de uitgevoerde maatregel</td>
-<td>H/T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>O</td>
-<td>A</td>
-<td>Soort lining</td>
-<td>(In RibX update van veld ACE)</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>O</td>
-<td>A</td>
-<td>Liningmateriaal</td>
-<td>(In RibX update van veld ACF)</td>
-<td>H</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Naam directie voerende partij</td>
-<td>Naam bedrijf en naam van de directievoerder</td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Contractcode directie voerende partij</td>
-<td>Opdrachtcode van het bedrijf van de directievoerder</td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Naam uitvoerende partij</td>
-<td>Naam contractpartner die de maatregelen uit voert</td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td> </td>
-<td>A</td>
-<td>Verificatiedatum (uitgevoerde maatregel)</td>
-<td> </td>
-<td>H/T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>O</td>
-<td>A</td>
-<td>Datum</td>
-<td>Datum van uitvoering van de maatregel</td>
-<td>H/T</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>A</td>
-<td>Informatiedrager</td>
-<td><p>Zie <a href="http://www.data">www.data</a>.gwsw.nl</p>
-<p>Inspectierapport RibX (met beelden en/of foto’s)</p>
-<p>Revisies</p>
-<p>Werktekeningen</p>
-<p>Prcoces Verbaal van Opneming</p>
-<p>(Bij liners) Rapportage laboratoriumonderzoek</p></td>
-<td>H</td>
-</tr>
-</tbody>
+<caption>Stap 6: Uitvoering maatregelen (toegevoegde velden tov stap 5)</caption>
 </table>
+
+|Veld|Heen|Terug|Naam                                                             |Betreft|Toelichting (geen = conform EN 13508-2)                                                                                                                                       |
+|----|----|-----|-----------------------------------------------------------------|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|S   |A   |A    |Functiereferentie werkgever                                      |P      |Opdrachtcode van opdrachtgever (bestaand veld in RibX)                                                                                                                        |
+|URI |A   |A    |Inventarisatiegegevens (RibX header A, C en E-codes)             |H      |Betreft de headergegevens van de objecten<br> Selectie van objecten die in het contract worden opgenomen                                                                      |
+|URI |A   |A    |Inspectiegegevens (RibX B, D en F-codes)                         |T      |Betreft de volledige inspectie van objecten die voor beoordeling in aanmerking komen.                                                                                         |
+|URI |A   |A    |Bestaat uit identificatiecodes van put of leiding en waarnemingen|T      |Bij maatregelen op toestandsaspecten dienen de riool- en waarneming records hiervan in het terug-bestand te worden geleverd.                                                  |
+|L=1 |A   |A    |Maatregel (op (deel)object)                                      |H      |Heen: De contractmaatregel uit stap 5<br> Terug: Betreft in stap 6 de uitgevoerde maatregel (op (deel)object). Deze kan afwijken van de contractmaatregel                     |
+|L=n |A   |A    |Maatregel (op toestandsaspect)                                   |T      |Heen: De contractmaatregel uit stap 5<br> Terug: Betreft in stap 6 de uitgevoerde maatregel (op toestandsaspect). Deze kan afwijken van de contractmaatregel                  |
+|S   |A   |A    |Opmerking maatregel (op (deel)object)                            |H      |Verplicht veld in stap 6 indien de uitgevoerde maatregel af wijkt van de contractmaatregel uit stap 5.                                                                        |
+|S   |A   |A    |Opmerking maatregel (op toestandsaspect)                         |T      |Verplicht veld in stap 6 indien de uitgevoerde maatregel af wijkt van de contractmaatregel uit stap 5.                                                                        |
+|L= max 1|A   |A    |Materiaal / UITGEVOERD                                           |H      |Alleen bij vervangen van een (deel)object of aanleg van deelobjecten. Aanleg van een volledig object valt hier buiten.<br> (In RibX update van veld ACD)                      |
+|L= max1|A   |A    |Vorm / UITGEVOERD                                                |H      |Alleen bij vervangen van volledig object (leiding of put). Aanleg van een volledig object valt hier buiten.<br> (In RibX update van veld ACA)                                 |
+|Max = 1 Int|A   |A    |Breedte / UITGEVOERD                                             |H      |Alleen bij vervangen van volledig object (leiding of put). Aanleg van een volledig object valt hier buiten.<br> (In RibX update van veld ACC)                                 |
+|Max = 1 Int|A   |A    |Hoogte / UITGEVOERD                                              |H      |Alleen bij vervangen van volledig object (leiding of put). Aanleg van een volledig object valt hier buiten.<br> (In RibX update van veld ACB)                                 |
+|S   |A   |A    |Naam opsteller                                                   |P      |Naam van de opsteller van het contract                                                                                                                                        |
+|S   |A   |A    |Functiereferentie opsteller                                      |P      |Opdrachtcode van het bedrijf van de opsteller                                                                                                                                 |
+|D   |A   |A    |Datum contract                                                   |P      |                                                                                                                                                                              |
+|S   |A   |A    |Kenmerk contract                                                 |P      |                                                                                                                                                                              |
+|S   |A   |A    |Code en omschrijving                                             |P      |                                                                                                                                                                              |
+|L=max 1|A   |A    |Contractvorm                                                     |P      |                                                                                                                                                                              |
+|URI |A   |A    |Parameters t.b.v. ontwerp relinen                                |H      |Geldt voor relinen leidingen en ook voor putten                                                                                                                               |
+|URI |O   |A    |Ontwerp liner                                                    |H      |Betreft de ontwerpberekening met wanddiktes, gedeclareerde waarden en certificering                                                                                           |
+|Long 6|O   |O    |Bestekspostnummer)                                               |H/T    |Om de link te leggen tussen maatregel en het contract c.q. verrekening van de uitgevoerde maatregel                                                                           |
+|L= max1|O   |A    |Soort lining                                                     |H      |(In RibX update van veld ACE)                                                                                                                                                 |
+|L= max1|O   |A    |Liningmateriaal                                                  |H      |(In RibX update van veld ACF)                                                                                                                                                 |
+|S   |A   |A    |Naam directie voerende partij                                    |P      |Naam bedrijf en naam van de directievoerder                                                                                                                                   |
+|S   |A   |A    |Contractcode directie voerende partij                            |P      |Opdrachtcode van het bedrijf van de directievoerder                                                                                                                           |
+|S   |A   |A    |Naam uitvoerende partij                                          |P      |Naam contractpartner die de maatregelen uit voert                                                                                                                             |
+|D   |A   |A    |Verificatiedatum (uitgevoerde maatregel)                         |H/T    |                                                                                                                                                                              |
+|D   |O   |A    |Datum                                                            |H/T    |Datum van uitvoering van de maatregel                                                                                                                                         |
+|L = min 1|O   |A    |Informatiedrager                                                 |H      |Zie www.data.gwsw.nl<br> Inspectierapport RibX (met beelden en/of foto’s)<br> Revisies<br> Werktekeningen<br> Prcoces Verbaal van Opneming<br> (Bij liners) Rapportage laboratoriumonderzoek|
+
 
 Stap 7: Verwerken oplevering uitgevoerde maatregelen in beheerpakket.
 ---------------------------------------------------------------------
 
 In deze stap is beschreven welke gegevens uiteindelijk als eindresultaat in de beheerdata verwerkt dient te worden nadat de benodigde maatregelen zijn uitgevoerd. In de praktijk zal bij elke voorgaande stap telkens ook (een deel van) de beheerdata worden verrijkt met dat uit deze stappen.
 
-Tabel : Informatie-uitwisseling stap 7
 
 <table>
-<thead>
-<tr class="header">
-<th><strong>Stap 7: Verwerken in beheerdata (toegevoegde velden tov stap 6; de stap van controle op de uitvoering is geborgd door D&amp;T)</strong></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Veld</strong></td>
-<td><strong>Heen</strong></td>
-<td><strong>Terug</strong></td>
-<td><strong>Naam</strong></td>
-<td><strong>Toelichting (geen = conform EN 13508-2)</strong></td>
-<td><strong>Betreft</strong></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Functiereferentie werkgever</td>
-<td>Opdrachtcode van opdrachtgever (bestaand veld in RibX)</td>
-<td>P</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Maatregel (op -onderdeel van het- object)</td>
-<td>De uitgevoerde maatregel uit stap 6</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Maatregel (op toestandsaspect)</td>
-<td>De uitgevoerde maatregel uit stap 6</td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Opmerking maatregel (op -onderdeel van het- object)</td>
-<td>Betreft de opmerking uit stap 6 van de uitvoerende partij indien de maatregel af wijkt van de maatregel uit stap 5.</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Opmerking maatregel (op toestandsaspect)</td>
-<td>Betreft de opmerking uit stap 6 van de uitvoerende partij indien de maatregel af wijkt van de maatregel uit stap 5.</td>
-<td>T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Materiaal / UITGEVOERD</td>
-<td><p>Alleen bij vervangen van een (deel)object of aanleg van deelobjecten. Aanleg van een volledig object valt hier buiten.</p>
-<p>(In RibX update van veld ACD)</p></td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Vorm / UITGEVOERD</td>
-<td><p>Alleen bij vervangen van volledig object (leiding of put)</p>
-<p>(In RibX update van veld ACA)</p></td>
-<td>H</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Breedte / UITGEVOERD</td>
-<td><p>Alleen bij vervangen van volledig object (leiding of put)</p>
-<p>(In RibX update van veld ACC)</p></td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Hoogte / UITGEVOERD</td>
-<td><p>Alleen bij vervangen van volledig object (leiding of put)</p>
-<p>(In RibX update van veld ACB)</p></td>
-<td>H</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Kenmerk contract<br />
-<em>Code en omschrijving</em></td>
-<td><em>LET OP: Dit zijn header gegevens van de activiteit en behoren niet tot het niveau van definitieve maatregel</em></td>
-<td>P</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Parameters t.b.v. ontwerp relinen</td>
-<td>Geldt voor relinen leidingen en ook bij putten</td>
-<td>H</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Ontwerp liner</td>
-<td>Betreft de ontwerpberekening met wanddiktes, gedeclareerde waarden en certificering</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Soort lining</td>
-<td>(In RibX update van veld ACE)</td>
-<td>H</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Liningmateriaal</td>
-<td>(In RibX update van veld ACF)</td>
-<td>H</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Verificatiedatum (uitgevoerde maatregel)</td>
-<td> </td>
-<td>H/T</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>A</td>
-<td>A</td>
-<td>Datum</td>
-<td>Bij aanleg/vervanging/relining is dit de startdatum van het (deel)object. Bij uitgevoerde onderhoudsmaatregelen volgt een nieuwe inspectie.</td>
-<td>H/T</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>A</td>
-<td>Informatiedrager</td>
-<td><p>Zie <a href="http://www.data">www.data</a>.gwsw.nl</p>
-<p>Inspectierapport RibX (met beelden en/of foto’s)</p>
-<p>Revisies</p>
-<p>Werktekeningen</p>
-<p>Prcoces Verbaal van Opneming</p>
-<p>(Bij liners) Rapportage laboratoriumonderzoek</p></td>
-<td>H</td>
-</tr>
-</tbody>
+<caption>Stap 7: Verwerken in beheerdata (toegevoegde velden tov stap 6; de stap van controle op de uitvoering is geborgd door D&T)</caption>
 </table>
+
+
+|Veld|Heen|Terug|Naam                                                             |Betreft|Toelichting (geen = conform EN 13508-2)                                                                                                                                       |
+|----|----|-----|-----------------------------------------------------------------|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|S   |A   |A    |Functiereferentie werkgever                                      |P      |Opdrachtcode van opdrachtgever (bestaand veld in RibX)                                                                                                                        |
+|L=1 |A   |A    |Maatregel (op -onderdeel van het- object)                        |H      |De uitgevoerde maatregel uit stap 6                                                                                                                                           |
+|L=n |A   |A    |Maatregel (op toestandsaspect)                                   |T      |De uitgevoerde maatregel uit stap 6                                                                                                                                           |
+|S   |A   |A    |Opmerking maatregel (op -onderdeel van het- object)              |H      |Betreft de opmerking uit stap 6 van de uitvoerende partij indien de maatregel af wijkt van de maatregel uit stap 5.                                                           |
+|S   |A   |A    |Opmerking maatregel (op toestandsaspect)                         |T      |Betreft de opmerking uit stap 6 van de uitvoerende partij indien de maatregel af wijkt van de maatregel uit stap 5.                                                           |
+|L= max 1|A   |A    |Materiaal / UITGEVOERD                                           |H      |Alleen bij vervangen van een (deel)object of aanleg van deelobjecten. Aanleg van een volledig object valt hier buiten.<br> (In RibX update van veld ACD)                      |
+|L=max 1|A   |A    |Vorm / UITGEVOERD                                                |H      |Alleen bij vervangen van volledig object (leiding of put)<br> (In RibX update van veld ACA)                                                                                   |
+|Int |A   |A    |Breedte / UITGEVOERD                                             |H      |Alleen bij vervangen van volledig object (leiding of put)<br> (In RibX update van veld ACC)                                                                                   |
+|Int |A   |A    |Hoogte / UITGEVOERD                                              |H      |Alleen bij vervangen van volledig object (leiding of put)<br> (In RibX update van veld ACB)                                                                                   |
+|S   |A   |A    |Kenmerk contract                                                 |P      |LET OP: Dit zijn header gegevens van de activiteit en behoren niet tot het niveau van definitieve maatregel                                                                   |
+|S   |A   |A    |Code en omschrijving                                             |P      |                                                                                                                                                                              |
+|URI |A   |A    |Parameters t.b.v. ontwerp relinen                                |H      |Geldt voor relinen leidingen en ook bij putten                                                                                                                                |
+|URI |A   |A    |Ontwerp liner                                                    |H      |Betreft de ontwerpberekening met wanddiktes, gedeclareerde waarden en certificering                                                                                           |
+|L=1 |A   |A    |Soort lining                                                     |H      |(In RibX update van veld ACE)                                                                                                                                                 |
+|L=1 |A   |A    |Liningmateriaal                                                  |H      |(In RibX update van veld ACF)                                                                                                                                                 |
+|D   |A   |A    |Verificatiedatum (uitgevoerde maatregel)                         |H/T    |                                                                                                                                                                              |
+|D   |A   |A    |Datum                                                            |H/T    |Bij aanleg/vervanging/relining is dit de startdatum van het (deel)object. Bij uitgevoerde onderhoudsmaatregelen volgt een nieuwe inspectie.                                   |
+|L = min 1|A   |A    |Informatiedrager                                                 |H      |Zie www.data.gwsw.nl<br> Inspectierapport RibX (met beelden en/of foto’s)<br> Revisies<br> Werktekeningen<br> Prcoces Verbaal van Opneming<br> (Bij liners) Rapportage laboratoriumonderzoek|
+
+
 
 # UML schema's tbv modellering
 
 ### Maatregelenproces
-![maatregelenproces](media/GWSW%20maatregelen%20-%20Maatregelenproces.png)
+
+<img alt="maatregelenproces" src="media/GWSW%20maatregelen%20-%20Maatregelenproces.png" width="400"/>
 
 ### Initieren reinigen en inspectie
-![reinigen_inspectie](media/GWSW%20maatregelen%20-%20InitierenReinigingInspectie.png)
+
+<img alt="reinigen_inspectie" src="media/GWSW%20maatregelen%20-%20InitierenReinigingInspectie.png" width="800"/>
 
 ### Beoordelen en opstellen maatregelen
-![reinigen_inspectie](media/GWSW%20maatregelen%20-%20Beoordelen%20en%20opstellen%20maatregelen.png)
+
+<img alt="reinigen_inspectie" src="media/GWSW%20maatregelen%20-%20Beoordelen%20en%20opstellen%20maatregelen.png" width="1000"/>
