@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 844.8 258">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #126f97;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-1, .cls-3, .cls-7 {
+        font-size: 10.5px;
+      }
+
+      .cls-2, .cls-4, .cls-5, .cls-6 {
+        font-size: 10.5px;
+      }
+
+      .cls-8 {
+        fill: #dadada;
+      }
+
+      .cls-8, .cls-9, .cls-10, .cls-11, .cls-12 {
+        stroke-width: 0px;
+      }
+
+      .cls-9 {
+        fill: #3aaa35;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #a66b15;
+      }
+
+      .cls-5 {
+        fill: #1d1d1b;
+      }
+
+      .cls-6, .cls-7 {
+        fill: #699b52;
+      }
+
+      .cls-13 {
+        letter-spacing: 2.72em;
+      }
+
+      .cls-10 {
+        fill: #009fe3;
+      }
+
+      .cls-14 {
+        stroke: #9d9d9c;
+      }
+
+      .cls-14, .cls-15 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-11 {
+        fill: #f39200;
+      }
+
+      .cls-12 {
+        fill: #fff;
+      }
+
+      .cls-15 {
+        stroke: #dadada;
+        stroke-width: 12px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1" data-name="Layer 1">
+    <g>
+      <line class="cls-12" x1="16.92" y1="126.74" x2="734.31" y2="126.74"/>
+      <polygon class="cls-8" points="16.92 133.08 718.28 133.08 718.28 142.76 734.31 126.74 718.28 110.71 718.28 120.39 16.92 120.39 16.92 133.08"/>
+    </g>
+    <path class="cls-15" d="M16.92,159.11h131.88c4.42,0,8.66-1.76,11.79-4.88l22.65-22.65c3.13-3.13,7.37-4.88,11.79-4.88h27.44"/>
+    <circle class="cls-9" cx="151.46" cy="159.11" r="5.97"/>
+    <circle class="cls-9" cx="186.62" cy="126.74" r="5.97"/>
+    <circle class="cls-11" cx="116.31" cy="159.11" r="5.97"/>
+    <circle class="cls-11" cx="81.15" cy="159.11" r="5.97"/>
+    <circle class="cls-9" cx="81.15" cy="126.74" r="5.97"/>
+    <circle class="cls-9" cx="220.09" cy="126.74" r="5.97"/>
+    <circle class="cls-9" cx="257.87" cy="126.74" r="5.97"/>
+    <circle class="cls-9" cx="295.64" cy="126.74" r="5.97"/>
+    <circle class="cls-9" cx="333.42" cy="126.74" r="5.97"/>
+    <circle class="cls-10" cx="371.19" cy="126.74" r="5.97"/>
+    <circle class="cls-10" cx="408.97" cy="126.74" r="5.97"/>
+    <circle class="cls-10" cx="446.74" cy="126.74" r="5.97"/>
+    <circle class="cls-10" cx="484.52" cy="126.74" r="5.97"/>
+    <circle class="cls-10" cx="522.29" cy="126.74" r="5.97"/>
+    <circle class="cls-9" cx="560.07" cy="126.74" r="5.97"/>
+    <circle class="cls-9" cx="597.84" cy="126.74" r="5.97"/>
+    <circle class="cls-9" cx="635.62" cy="126.74" r="5.97"/>
+    <rect class="cls-14" x="21.74" y="118.19" width="46.87" height="30.53"/>
+    <circle class="cls-9" cx="626.17" cy="204.21" r="5.97"/>
+    <circle class="cls-11" cx="626.17" cy="187.15" r="5.97"/>
+    <circle class="cls-10" cx="626.17" cy="221.26" r="5.97"/>
+    <rect class="cls-14" x="72.82" y="118.19" width="46.87" height="30.53"/>
+    <rect class="cls-14" x="174.59" y="117.45" width="57.3" height="30.53"/>
+    <rect class="cls-14" x="238.34" y="117.45" width="40.91" height="30.53"/>
+    <rect class="cls-14" x="282.89" y="117.45" width="67.85" height="30.53"/>
+    <rect class="cls-14" x="354.36" y="117.45" width="185.44" height="30.53"/>
+    <rect class="cls-14" x="542.9" y="117.45" width="104.62" height="30.53"/>
+    <text class="cls-5" transform="translate(42.48 142.9)"><tspan x="0" y="0">1</tspan></text>
+    <text class="cls-5" transform="translate(92.59 142.9)"><tspan x="0" y="0">2</tspan></text>
+    <text class="cls-5" transform="translate(200.06 143.95)"><tspan x="0" y="0">3</tspan></text>
+    <text class="cls-5" transform="translate(255.13 143.95)"><tspan x="0" y="0">4</tspan></text>
+    <text class="cls-5" transform="translate(313.24 143.95)"><tspan x="0" y="0">5</tspan></text>
+    <text class="cls-5" transform="translate(443.53 144.07)"><tspan x="0" y="0">6</tspan></text>
+    <text class="cls-5" transform="translate(596.75 144.19)"><tspan x="0" y="0">7</tspan></text>
+  </g>
+  <g id="Layer_2" data-name="Layer 2">
+    <text class="cls-3" transform="translate(90.31 200.19) rotate(-45)"><tspan x="0" y="0">melding</tspan></text>
+    <text class="cls-3" transform="translate(17.2 238.15) rotate(-45)"><tspan x="0" y="0">waarneming burger</tspan></text>
+    <text class="cls-7" transform="translate(75.96 249.71) rotate(-45)"><tspan x="0" y="0">waarneming gemeente</tspan></text>
+    <text class="cls-7" transform="translate(188.92 118.19) rotate(-45)"><tspan x="0" y="0">beoordeling</tspan></text>
+    <text class="cls-7" transform="translate(257.91 118.19) rotate(-45)"><tspan x="0" y="0">opstellen maatregelenpakket</tspan></text>
+    <text class="cls-7" transform="translate(220.14 118.19) rotate(-45)"><tspan x="0" y="0">voorstel maatregel</tspan></text>
+    <text class="cls-7" transform="translate(295.69 118.19) rotate(-45)"><tspan x="0" y="0">data in uitwisselformaat zetten</tspan></text>
+    <text class="cls-1" transform="translate(485.62 116.1) rotate(-45)"><tspan x="0" y="0">data in uitwisselformaat zetten</tspan></text>
+    <text class="cls-7" transform="translate(336.17 116.1) rotate(-45)"><tspan x="0" y="0">zenden data naar aannemer</tspan></text>
+    <text class="cls-1" transform="translate(521.2 116.1) rotate(-45)"><tspan x="0" y="0">zenden data naar gemeente</tspan></text>
+    <text class="cls-7" transform="translate(558.97 116.1) rotate(-45)"><tspan x="0" y="0">verficatie ontvangst</tspan></text>
+    <text class="cls-1" transform="translate(371.24 116.1) rotate(-45)"><tspan x="0" y="0">verficatie ontvangst</tspan></text>
+    <text class="cls-1" transform="translate(409.01 116.1) rotate(-45)"><tspan x="0" y="0">uitvoeren maatregelen</tspan></text>
+    <text class="cls-1" transform="translate(446.74 116.1) rotate(-45)"><tspan x="0" y="0">uitvoering terugkoppelen</tspan></text>
+    <text class="cls-7" transform="translate(596.75 113.73) rotate(-45)"><tspan x="0" y="0">verwerken mutaties</tspan></text>
+    <text class="cls-7" transform="translate(634.52 116.1) rotate(-45)"><tspan x="0" y="0">opslaan uitgevoerde maatregel </tspan><tspan class="cls-13" x="0" y="12.6">	</tspan><tspan x="31.49" y="12.6">in maatregelendatabase</tspan></text>
+    <text class="cls-7" transform="translate(81.15 116.1) rotate(-45)"><tspan x="0" y="0">waarneming uit inspectie</tspan></text>
+    <text class="cls-4" transform="translate(639.22 190.23)"><tspan x="0" y="0">actie burger</tspan></text>
+    <text class="cls-6" transform="translate(641.67 207.29)"><tspan x="0" y="0">actie gemeente</tspan></text>
+    <text class="cls-2" transform="translate(641.67 224.35)"><tspan x="0" y="0">actie aannemer</tspan></text>
+  </g>
+</svg>
