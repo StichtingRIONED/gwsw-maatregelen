@@ -129,13 +129,15 @@ Stap 7, het verwerken van de gegevens in de beheerdata, staat in deze opsomming 
 
 ## Processchema
 
-Een voorbeeld van een processchema met de stappen 1 t/m 7 met de daarbij horende data-uitwisseling is in afbeelding 2 weergegeven. In dit schema is geen directe link tussen de verschillende processtappen opgenomen. Uitwisseling geschiedt via de data-uitwisseling plaats met een “Heen” en “Terug” bestand per processtap. Er is bewust voor gekozen om een processtap niet volledig als een stroomschema uit te werken. Processen kunnen per opdrachtgever verschillen en het uitwerken ervan behoort niet tot de scope van GWSW-Maatregelen.
+Een voorbeeld van een processchema met de stappen 1 t/m 7 met de daarbij horende data-uitwisseling is in onderstaande afbeelding weergegeven. In dit schema is geen directe link tussen de verschillende processtappen opgenomen. Uitwisseling geschiedt via de data-uitwisseling met een “Heen” en “Terug” bestand per processtap. Er is bewust voor gekozen om een processtap niet volledig als een stroomschema uit te werken. Processen kunnen per opdrachtgever verschillen en het uitwerken ervan behoort niet tot de scope van GWSW-Maatregelen.
 
-<img src="media/image8.png" style="width:5.728in;height:9.16763in" />
+<img src="media/processchema.svg" />
 
-Afbeelding: Processtappen en data-uitwisseling
+<table>
+<caption>Processtappen op  hoofdlijnen en data-uitwisseling</caption>
+</table>
 
-Het uitgangspunt dat bij afbeelding 2 is gehanteerd, is dat de benodigde controles en hoe om te gaan met verbeteringen, binnen deze processtappen zelf plaats vindt.
+Het uitgangspunt dat bij bovenstaande afbeelding is gehanteerd, is dat de benodigde controles en hoe om te gaan met verbeteringen, binnen deze processtappen zelf plaatsvindt.
 
 Het resultaat van een voorgaande processtap wordt gebruikt als input voor een opvolgende stap. Bij het opstellen van de benodigde data-uitwisseling is data die voor een vervolgstap niet meer nodig is, buiten de dataoverdracht gehouden. Dat houdt in dat een terug bestand uit een voorgaande processtap niet per definitie gelijk hoeft te zijn aan het heen bestand voor de volgende processtap.
 
