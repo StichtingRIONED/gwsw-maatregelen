@@ -131,7 +131,7 @@ Stap 7, het verwerken van de gegevens in de beheerdata, staat in deze opsomming 
 
 Een voorbeeld van een processchema met de stappen 1 t/m 7 met de daarbij horende data-uitwisseling is in afbeelding 2 weergegeven. In dit schema is geen directe link tussen de verschillende processtappen opgenomen. Uitwisseling geschiedt via de data-uitwisseling plaats met een “Heen” en “Terug” bestand per processtap. Er is bewust voor gekozen om een processtap niet volledig als een stroomschema uit te werken. Processen kunnen per opdrachtgever verschillen en het uitwerken ervan behoort niet tot de scope van GWSW-Maatregelen.
 
-<img src="media/image8.png" style="width:5.728in;height:9.16763in" />
+<img src="media/Uitwisseling%20informatie%20stappen%203-7.png" style="width:9in" />
 
 Afbeelding: Processtappen en data-uitwisseling
 
