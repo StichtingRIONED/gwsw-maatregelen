@@ -118,7 +118,7 @@ Vanuit bovenstaande afbeelding kunnen generieke processtappen 1 t/m 7 worden sam
 1.  Initiëren reiniging en inspectie
 2.  Uitvoeren reiniging en inspectie en aanleveren waarnemingen
 3.  Beoordelen inspecties en opstellen maatregeladvies
-4.  Vaststellen definitieve maatregel
+4.  Vaststellen maatregelplan
 5.  Opstellen contract
 6.  Uitvoeren maatregelen
 7.  Verwerken in beheerdata
