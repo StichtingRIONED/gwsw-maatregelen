@@ -51,7 +51,7 @@ De algemene beschrijving van het GWSW model vindt u op [data.gwsw.nl](https://da
 ## Doelstelling
 De doelstelling van deze module is tweeledig. 
 
-Enerzijds moet de module voorzien in voldoende termen en definities, zodat een beheerder voldoende inzicht heeft in de historie van uitgevoerde maatregelen op zijn objecten. Dat houdt het volgende in:
+Enerzijds moet de module voorzien in voldoende termen en definities, zodat de diverse ketenpartners, waaronder de rioleringsbeheerder, voldoende inzicht hebben in de historie van uitgevoerde maatregelen op zijn objecten. Dat houdt het volgende in:
 - Welke stakeholders zijn bij welke projecten betrokken?
 - Wanneer is welke maatregel bij welk object (object = ieder mogelijk object uit de soortenboom waarop maatregelen uitgevoerd kunnen worden) uitgevoerd?
 - Welke resultaten zijn er door de genomen maatregelen bewerkstelligd (liner, reparatie, toestandsverbetering)?
