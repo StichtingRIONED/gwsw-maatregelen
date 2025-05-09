@@ -90,7 +90,7 @@ In de eerste (concept-)versie van GWSW-maatregelen voor vrijverval rioolleidinge
 - Vervangen
 - Verwijderen
 
-Voor ieder van deze maatregelen is een verdere subtypering aangebracht. In deze subtypering is veelal zijn de maatregelen opgbouwd uit de samenvoeging van de maatregel met het object of met het toestandsaspect. Zo is bijvoorbeeld bij het maatregeltype vervangen onderscheid gemaakt in de subtypes:
+Voor ieder van deze maatregelen is een verdere subtypering aangebracht. In deze subtypering zijn de maatregelen opgebouwd uit de samenvoeging van de maatregel met het object of met het toestandsaspect. Zo is bijvoorbeeld bij het maatregeltype vervangen onderscheid gemaakt in de subtypes:
 -   Rioolput vergroten
 -   Rioolput vervangen
 -   Vrijverval rioolleiding vervangen
@@ -100,8 +100,22 @@ Voor ieder van deze maatregelen is een verdere subtypering aangebracht. In deze 
 
 In de aanloop naar deze actualisatie van GWSW-Maatregelen is binnen de werkgroep nagedacht in hoeverre deze concept-opzet bruikbaar is. Door het maatregeltype “vervangen” te koppelen aan een fysiek object, én gebruik te maken van de headergegevens uit het GWSW-RibX, ligt de maatregel automatisch vast. Ditzelfde geldt voor maatregelen aan toestandsaspecten. Door het subtype “vrijmaken leidingprofiel” van de maatregel “Onderhouden” te koppelen aan een toestandsaspect, ligt ook hiermee automatisch vast dat het gaat om het verwijderen van een doorgestoken inlaat, wortels, afzetting of dergelijke.
 
-De conclusie uit de werkgroep is dat door de maatregel op een zo hoog mogelijk niveau in de soortenboom te beschrijven en deze te koppelen aan een object of aan een toestandsaspect, er een flinke vereenvoudiging kan plaatsvinden. Dit komt de leesbaarheid ten goede en GWSW-Maatregelen is hierdoor toekomstbestendiger omdat niet bij elke wijziging in objecttypen ook meteen de mogelijkheden binnen GWSW-Maatregelen hoeven te worden aangepast.
+Daarnaast bestaan enkele maatregelen uit twee verschillende acties. Het gaat om maatregelen waarbij een bestaand (deel)object wordt verwijderd, waarna een ander (deel)object wordt aangebracht. Dit betreft dus vervangen en verbeteren. De relatie met de ‘Catalogus Resultaatsbeschrijvingen’ van CROW is dat deze objecten worden verwijderd en er een nieuw object wordt aangebracht. Alle informatie van het (deel)object dat wordt verwijderd is historie van dat (deel)object dat niet meer bestaat. Het is aan de beheerder of deze historische informatie relevant genoeg is om te bewaren of uit de beheerdata kan worden verwijderd. In ieder geval wordt een nieuw (deel)object, met bijbehorende kenmerken, geregistreerd.
 
+Door verwijderen en aanbrengen als verschillende deelacties te zien, is informatieregistratie van de volgende maatregelen binnen GWSW-Maatregelen geborgd.
+
+| GWSW maatregel           | Deelactie Verwijderen | Deelactie Aanbrengen |
+|--------------------------|-----------------------|----------------------|
+| Verwijderen              | Ja                    | n.v.t.               |
+| Vervangen                | Ja                    | Ja                   |
+| Verbeteren               | Ja                    | Ja                   |
+| Aanbrengen (= Aanleggen) | n.v.t.                | Ja                   |
+
+Binnen GWSW-Maatregelen blijven de maatregelen verwijderen, vervangen, verbeteren en aanleg gehandhaafd. Op de achtergrond dient informatie-uitwisseling op basis van de deelacties verwijderen en aanbrengen te geschieden.
+
+De conclusie uit de werkgroep is dat door de maatregel op een zo hoog mogelijk niveau in de soortenboom te beschrijven en deze te koppelen aan een (deel)object of aan een toestandsaspect, er een flinke vereenvoudiging kan plaatsvinden. Dit komt de leesbaarheid ten goede en GWSW-Maatregelen is hierdoor toekomstbestendiger omdat niet bij elke wijziging in objecttypen ook meteen de mogelijkheden binnen GWSW-Maatregelen hoeven te worden aangepast.
+
+Daarnaast is de conclusie dat de link met verwijderen en/of aanbrengen van (deel)objecten in relatie tot de ‘Catalogus Resultaatsbeschrijvingen’ van CROW op de achtergrond plaats dient te vinden. Afhankelijk van de stap in hoofdstuk 3 gaat het dan in geval van ‘heen’ om informatie van het te verwijderen (deel)object en bij ‘terug’ om informatie van het aan te brengen (deel)object.
 
 # Maatregelenproces
 
@@ -109,7 +123,7 @@ De conclusie uit de werkgroep is dat door de maatregel op een zo hoog mogelijk n
 
 Binnen het proces van beheer, onderhoud, renovatie en vervangen van de riolering zijn een aantal generieke processtappen te onderscheiden. Als voorbeeld zijn in onderstaande afbeelding acties aan bijvoorbeeld een kolkaansluitleiding opgenomen.
 
-<img src="media/tijdlijn.svg" />
+![tijdlijn](media/tijdlijn.svg)
 
 Afbeelding: Voorbeeld acties aan kolkaansluitleiding (Afbeelding afkomstig van Wouter van Riel.)
 
